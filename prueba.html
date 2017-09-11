@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<style>
+		 ul.desplegable {
+ list-style:none;
+ margin:0;
+ padding:0;
+}
+
+/* items del menu */
+
+ ul.desplegable li.sub_top {
+ background-color:#2e518b;
+}
+
+/* enlaces del menu */
+
+ ul.desplegable a.redirect {
+ display:block;
+ color:#fff;
+ text-decoration:none;
+ font-weight:400;
+ font-size:15px;
+ padding:10px;
+ font-family:"HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+ text-transform:uppercase;
+ letter-spacing:1px;
+}
+
+/* items del menu */
+
+ ul.desplegable li.sub_top {
+ position:relative;
+ float:left;
+ margin:0;
+ padding:0;
+}
+
+/* efecto al pasar el ratón por los items del menu */
+
+ ul.desplegable li.sub_top:hover {
+ background:#5b78a7;
+}
+ ul.desplegable ul.sub_cate {
+ display:none;
+ position:absolute;
+ top:100%;
+ left:0;
+ background:#eee;
+ padding:0;
+}
+
+/* items del menu desplegable */
+
+ ul.desplegable ul.sub_cate li.sub_menu2 {
+ float:none;
+ width:150px
+}
+
+/* enlaces de los items del menu desplegable */
+
+ ul.desplegable ul.sub_cate a.redirect {
+ line-height:120%;
+ padding:10px 15px;
+}
+
+/* items del menu desplegable al pasar el ratón */
+
+ ul.desplegable li.sub_top:hover > ul.sub_cate {
+ display:block;
+}
+
+	</style>
+</head>
+<body>
+	<nav id="menu">
+<!-- start menu -->
+<ul>
+ <li><a href="#">Enlace 2</a>
+<!-- start menu desplegable -->
+ <ul>
+ <li><a href="#">Enlace 2.1</a></li>
+ <li><a href="#">Enlace 2.2</a></li>
+ <li><a href="#">Enlace 2.3</a></li>
+ </ul>
+
+
+ </li>
+ </ul>
+<!-- end menu desplegable -->
+</nav>
+</body>
+</html>
