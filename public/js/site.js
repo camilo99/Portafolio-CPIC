@@ -72,10 +72,10 @@ jQuery(document).ready(function($) {
     delay: 100,
   });
 
-  // $('.modal').on('shown.bs.modal', function () {
-  //   $(this).find('[autofocus]').focus();
+  $('.modal').on('shown.bs.modal', function () {
+    $(this).find('[autofocus]').focus();
 
-  // });
+  });
 
 
 });
