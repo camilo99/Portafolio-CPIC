@@ -102,13 +102,17 @@
 @endif
 <section class="slider">
 	<header class="jumbotron jumbotron-index hero-index">
+	@if(Auth::check())
+				<a style="position: relative; top: 35px; right: 130px;" class="btn btn-success" href="{{ url('slider/create') }}"> 
+						Añadir Imagen
+				</a>
+		@endif
 		<div class="owl-carousel" id="Thinker">
+
 			@foreach($slider_img as $img)
 			<div class="imageContainer">
 			@if(Auth::check())
-				<a class="btn btn-success" href="{{ url('slider/create') }}"> 
-						Añadir Imagen
-				</a>
+
 				<a href="{{ url('slider/'.$img->id.'/edit') }}" class="btn btn-default"> Editar Imagen </a>
 					
 			@endif
@@ -322,11 +326,6 @@
 
 	<div class="container">
 			
-			@if(Auth::check())
-				
-				<a href="{{ url('slider/'.$img->id.'/edit') }}" class="btn btn-default"> Editar Imagen </a>
-					
-			@endif
 			
 				
 		
