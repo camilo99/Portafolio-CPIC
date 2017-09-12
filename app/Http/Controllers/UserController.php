@@ -43,7 +43,7 @@ class UserController extends Controller
         }
         $user->name = $request->get('name');
         $user->email = $request->get('email');
-        $user->password = $request->get('password');
+        $user->password = bcrypt($request->get('password'));
         $user->dependencia = $request->get('dependencia');
         $user->image = 'images/'.$file;
         if($user->save()) {
@@ -72,8 +72,8 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        $us = User::find($id);
-        return view('users.edit', compact('us'));
+        $user = User::find($id);
+        return view('users.edit', compact('user'));
     }
 
     /**
@@ -85,7 +85,20 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = User::find($id);
+        if ($request->hasFile('image')) {
+            $file = time().'.'.$request->image->getClientOriginalExtension();
+            $request->image->move(public_path('images'), $file);
+        }
+        $user->name = $request->get('name');
+        $user->email = $request->get('email');
+        $user->password = bcrypt($request->get('password'));
+        $user->dependencia = $request->get('dependencia');
+        $user->image = 'images/'.$file;
+        if($user->save()) {
+            return redirect('admin')->with('status', 'El programa de formación fue adicionado con exito!');            
+        }
+        
     }
 
     /**
