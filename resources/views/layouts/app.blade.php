@@ -26,7 +26,6 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{asset ('css/font-awesome.min.css')}}">
     <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('css/gallerybox.css')}}">
     <link rel="stylesheet" href="{{ asset('css/animate.css')}}">
     <link rel="stylesheet" href="{{ asset('css/alert.default.css')}}">
     <link rel="stylesheet" href="{{ asset('css/alert.core.css')}}">
@@ -57,6 +56,7 @@
                     </form>
                 </li>
         </ul>
+
          <li class="diferentes">
                     <img id="perfil" src="{{ asset(Auth::user()->image)}}" alt="" class="img-responsive">
                     <div class="wala">
@@ -66,6 +66,7 @@
                     <button class="ball"></button>
                     <span class="online_mode">En Linea</span>
         </li>
+
     </div>
     <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
   
@@ -74,7 +75,13 @@
   
             <ul id="menu-content" class="menu-content collapse out">
 
+
                
+
+                <li >
+                    <img id="perfil" src="{{ asset(Auth::user()->image)}}" alt="" class="img-responsive">
+                </li>
+
                 
                 <li>
                   <a href="#">
@@ -98,7 +105,11 @@
 
 
                 <li data-toggle="collapse" data-target="#new" class="collapsed">
+
                   <a href="#"><i class="fa fa-columns fa-lg"></i> Programas De Formacion <span class="arrow"></span></a>
+
+                  <a href="#"><i class="fa fa-car fa-lg"></i> Programas De Formacion <span class="arrow"></span></a>
+
                 </li>
                 <ul class="sub-menu collapse" id="new">
                   <li>Formacion Titulada</li>
@@ -185,10 +196,9 @@
     <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('js/velocity.min.js') }}"></script>
     <script src="{{ asset('js/alert.min.js') }}"></script>
-    <script src="{{ asset('js/jquery.gallerybox.js') }}"></script>
     <script src="{{ asset('js/aos.js') }}"></script>
-
     <script src="{{ asset('js/site.js') }}"></script>
+    <script src="{{asset('js/gallery.js')}}"></script> 
 
 <script>
     $(document).ready(function() {
