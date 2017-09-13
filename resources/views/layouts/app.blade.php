@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="{{ asset('css/alert.default.css')}}">
     <link rel="stylesheet" href="{{ asset('css/alert.core.css')}}">
     <link rel="stylesheet" href="{{ asset('css/aos.css')}}">
+
     
 
     <link rel="stylesheet" href="{{ asset('css/master.css')}}">
@@ -41,7 +42,70 @@
 </head>
 <body>
     @if(Auth::check())
-    <div id="sidebar">
+    <div class="nav-side-menu">
+    <div class="brand">
+        <ul>
+             <li>
+                    <a href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                                 document.getElementById('logout-form').submit();">
+                        Cerrar sesión
+                    </a>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        {{ csrf_field() }}
+                    </form>
+                </li>
+        </ul>
+    </div>
+    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+  
+        <div class="menu-list">
+
+  
+            <ul id="menu-content" class="menu-content collapse out">
+
+                <li >
+                    <img id="perfil" src="{{ asset(Auth::user()->image)}}" alt="" class="img-responsive">
+                </li>
+                
+                <li>
+                  <a href="#">
+                  <i class="fa fa-user fa-lg"></i> Mi perfil
+                  </a>
+                  </li>
+
+               
+                 <li>
+                  <a href="#">
+                  <i class="fa fa-users fa-lg"></i> Usuarios
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                  <i class="fa fa-paper-plane fa-lg"></i> Inicio
+                  </a>
+                </li>
+               
+
+
+
+                <li data-toggle="collapse" data-target="#new" class="collapsed">
+                  <a href="#"><i class="fa fa-car fa-lg"></i> Programas De Formacion <span class="arrow"></span></a>
+                </li>
+                <ul class="sub-menu collapse" id="new">
+                  <li>Formacion Titulada</li>
+                  <li>Formacion Complementaria</li>
+                  <li>Formacion Virtual</li>
+                </ul>
+
+
+                 
+
+            </ul>
+     </div>
+</div>
+        <!-- <div id="sidebar">
         <div id="sidebar-content">
             <ul class="list-unstyled text-center">
                 <li>
@@ -67,12 +131,25 @@
                 <li  class="d">
                     <a class="d" href="{{url('/')}}">Inicio</a>
                 </li>
-                <li  class="d">
-                    <a class="d" href="{{ url('programas')}}">Programas de formación</a>
+               
+                
+               <li class="sub_top"><a class="pop" href=""> Programas De Formacion </a>
+                    <ul class="sub_cate">
+                        <li class="sub_menu2">
+                            <a class="redirect" href="">Formacion Titulada</a>
+                        </li>
+                        <li class="sub_menu2">
+                            <a class="redirect" href="">Formacion Complementaria</a>
+                        </li>
+                        <li class="sub_menu2">
+                            <a class="redirect" href="">Formacion Virtual</a>
+                        </li>
+                    </ul>
                 </li>
+
             </ul>
         </div>
-    </div>
+    </div> -->
     @endif
 
     

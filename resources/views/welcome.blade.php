@@ -26,7 +26,7 @@
 		</div>
 
 		<div class="collapse navbar-collapse" id="app-navbar-collapse">
-			<!-- Left Side Of Navbar -->
+			<!-- Left w Of Navbar -->
 			<ul class="nav navbar-nav">
 				&nbsp;
 			</ul>
@@ -103,7 +103,7 @@
 <section class="slider">
 	<header class="jumbotron jumbotron-index hero-index">
 	@if(Auth::check())
-				<a style="position: relative; top: 35px; right: 130px;" class="btn btn-success" href="{{ url('slider/create') }}"> 
+				<a style="position: absolute;z-index: 999; right: 130px; top: 36px;" class="btn btn-success" href="{{ url('slider/create') }}"> 
 						Añadir Imagen
 				</a>
 		@endif
@@ -113,7 +113,12 @@
 			<div class="imageContainer">
 			@if(Auth::check())
 
-				<a href="{{ url('slider/'.$img->id.'/edit') }}" class="btn btn-default"> Editar Imagen </a>
+				<a  style="    position: absolute;
+    top: 38px;
+    z-index: 999;
+    /* border: 1px solid red; */
+    /* left: 0; */
+    right: 0;" href="{{ url('slider/'.$img->id.'/edit') }}" class="btn btn-default"> Editar Imagen </a>
 					
 			@endif
 				<img class="featured-image img-responsive" src="{{asset ($img->imagen)}}" alt="hero">   
@@ -295,53 +300,6 @@
 
 	</div>
 </section>
-
-<section class="gallery">
-	<div class="">
-		<h4>GALERIA</h4>
-		<hr>
-		<div class="row">
-			
-			<div class="owl-carousel">
-				<div>
-					<div class="imagenes-sli">
-						<img src="{{ asset('imgs/bienestar/14962773_583713631813941_9008235928232615140_n.jpg') }}" alt="">
-					</div>
-					<div class="imagenes-sli">
-						<img src="{{ asset('imgs/bienestar/14962773_583713631813941_9008235928232615140_n.jpg') }}" alt="">
-
-					</div>
-					<div class="imagenes-sli">
-						<img src="{{ asset('imgs/bienestar/14962773_583713631813941_9008235928232615140_n.jpg') }}" alt="">
-
-					</div>
-					<div class="imagenes-sli">
-						<img src="{{ asset('imgs/bienestar/14962773_583713631813941_9008235928232615140_n.jpg') }}" alt="">
-
-					</div>
-					<div class="imagenes-sli">
-						<img src="{{ asset('imgs/bienestar/14962773_583713631813941_9008235928232615140_n.jpg') }}" alt="">
-
-					</div>
-					<div class="imagenes-sli">
-						<img src="{{ asset('imgs/bienestar/14962773_583713631813941_9008235928232615140_n.jpg') }}" alt="">
-
-					</div>
-
-
-				</div>
-				<div> Your Content </div>
-				<div> Your Content </div>
-				<div> Your Content </div>
-				<div> Your Content </div>
-				<div> Your Content </div>
-				<div> Your Content </div>
-			</div>
-		</div>
-	</div>
-</div>
-</section>
-
 
 
 @endsection
