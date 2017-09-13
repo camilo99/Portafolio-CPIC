@@ -60,6 +60,17 @@ class Handler extends ExceptionHandler
             return response()->json(['error' => 'Unauthenticated.'], 401);
         }
 
-        return redirect()->guest(route('login'));
+        return redirect()->guest(route('logout'));
     }
+    public function render($request, Exception $exception)
+    {
+        if ($exception instanceof ModelNotFoundException) {
+            $exception = new NotFoundHttpException($exception->getMessage(), $exception);
+        }
+        if ($exception instanceof \Illuminate\Session\TokenMismatchException) {
+            return redirect('/')->withErrors(['token_error' => 'Disculpa, su sesión parece haber caducado. Vuelve a intentarlo.']);
+        }
+        return parent::render($request, $exception);
+    }
+
 }

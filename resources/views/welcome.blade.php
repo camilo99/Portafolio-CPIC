@@ -301,6 +301,7 @@
 	</div>
 </section>
 
+
 <section class="galeria">
 	<div class="container-fluid">
 		<div class="row">
@@ -316,6 +317,7 @@
 		</div>
 	</div>
 </section>
+
 
 @endsection
 
