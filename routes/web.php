@@ -27,6 +27,9 @@ Route::get('/admin', 'AdminController@index');
 
 Route::get('/contact', 'ContactController@index');
 
+Route::get('pros', 'WelcomeController@mostrarProgramas');
+
+
 Route::resource('programas', 'ProgramController');
 
 Route::resource('admin', 'AdminController');
