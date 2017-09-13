@@ -101,10 +101,9 @@
 
                 </li>
                 <ul class="sub-menu collapse" id="new">
-                  <li>Formacion Titulada</li>
-                  <li>Formacion Complementaria</li>
-                  <li>Formacion Virtual</li>
-                </ul>
+                  <a href="{{url('programas/')}}"><li>Formacion Titulada</li></a>
+                  <a href="{{url('')}}"><li>Formacion Complementaria</li></a>
+                  <a href="{{url('')}}"><li>Formacion Virtual</li></a>
 
 
                  
