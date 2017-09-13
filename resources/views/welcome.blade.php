@@ -39,10 +39,10 @@
 				<li class="sub_top"><a class="pop" href=""> Programas De Formacion </a>
 					<ul class="sub_cate">
 						<li class="sub_menu2">
-							<a class="redirect" href="">Formacion Titulada</a>
+							<a class="redirect" href="{{url('programas')}}">Formacion Titulada</a>
 						</li>
 						<li class="sub_menu2">
-							<a class="redirect" href="">Formacion Complementaria</a>
+							<a class="redirect" href="{{url('pros')}}">Formacion Complementaria</a>
 						</li>
 						<li class="sub_menu2">
 							<a class="redirect" href="">Formacion Virtual</a>
@@ -140,23 +140,48 @@
 
 		<h1 class="text-center ali">Nuestros Aliados</h1>
 		<hr>
-		@foreach($empresas->chunk(4) as $chunk)
 		<div class="row">
-		@foreach($chunk as $emp)
-			
 			<div class="col-sm-6 col-md-3 unir_t">
 				<div class="thumbnail animated fadeIn">
-					<img class="img_pagi" src="{{ asset($emp->foto)}}" alt="...">
+					<img class="img_pagi" src="{{ asset('images/1504897540.png') }}" alt="...">
 					<div class="caption">
-					<h3>{{$emp->titulo}}</h3>
-						<p>{{$emp->descripcion}}</p>
-						<p><a href="http://www.sena.edu.co/es-co/formacion/Paginas/tecnologia-innovacion.aspx" class="btn btn-primary" role="button">Mas Informacion</a>
-						</div>
+						<h3></h3>
+						<p>La Agencia Pública de Empleo del SENA presta un servicio de intermediación laboral público, gratuito, indiscriminado y sin intermediarios, para que los colombianos puedan participar de una oportunidad de empleo y los empresarios encuentren el talento humano que requieren para ocupar sus vacantes.</p>
+						<a href="https://agenciapublicadeempleo.sena.edu.co/Paginas/inicio.aspx" class="btn btn-primary" role="button">Mas Informacion</a>
 					</div>
 				</div>
-		@endforeach
+			</div>
+			<div class="col-sm-6 col-md-3 unir_t">
+				<div class="thumbnail animated fadeIn">
+					<img class="img_pagi" src="{{ asset('images/1504897601.png') }}" alt="...">
+					<div class="caption">
+						<h3></h3>
+						<p>Es un programa de innovación tecnológica del ServicioNacional de Aprendizaje dirigida a todos los Colombianos, que actúa como acelerador para el desarrollo de proyectos de I+D+i materializados en prototipos funcionales en cuatro líneas tecnológicas: Electrónica y Telecomunicaciones, Tecnologías Virtuales, Ingeniería y diseño y Biotecnología nanotecnología, que promueva el emprendimiento de base tecnológica.</p>
+						<a href="http://tecnoparque.sena.edu.co/" class="btn btn-primary" role="button">Mas Informacion</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-3 unir_t">
+				<div class="thumbnail animated fadeIn">
+					<img class="img_pagi" src="{{ asset('images/1504897630.png') }}" alt="...">
+					<div class="caption">
+						<h3></h3>
+						<p>El Sistema de Investigación, Desarrollo Tecnológico e Investigación (SENNOVA) tiene el propósito de fortalecer los estándares de calidad y pertinencia, en las áreas de investigación, desarrollo tecnológico e innovación, de la formación profesional impartida en la Entidad.</p>
+						<a href="http://www.sena.edu.co/es-co/formacion/Paginas/tecnologia-innovacion.aspx" class="btn btn-primary" role="button">Mas Informacion</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-3 unir_t">
+				<div class="thumbnail animated fadeIn">
+					<img class="img_pagi" src="{{ asset('images/1504897668.png') }}" alt="...">
+					<div class="caption">
+						<h3></h3>
+						<p>Más que una competencia, para el SENA WorldSkills es una estrategia que promueve y fomenta la calidad en la formación técnica y tecnológica, permitiendo a sus aprendices medir sus conocimientos en el plano internacional y alcanzar los más altos niveles de preparación y competitividad en cada una de sus habilidades.</p>
+						<a href="http://worldskills.sena.edu.co/" class="btn btn-primary" role="button">Mas Informacion</a>
+					</div>
+				</div>
+			</div>
 		</div>		
-		@endforeach
 				
 	</div>
 
