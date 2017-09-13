@@ -31,8 +31,7 @@
     <link rel="stylesheet" href="{{ asset('css/alert.default.css')}}">
     <link rel="stylesheet" href="{{ asset('css/alert.core.css')}}">
     <link rel="stylesheet" href="{{ asset('css/aos.css')}}">
-    <link rel="stylesheet" href="{{ asset('css/AdminLTE.css')}}">
-    <link rel="stylesheet" href="{{ asset('dist/AdminLTE.css')}}">
+
     
 
     <link rel="stylesheet" href="{{ asset('css/master.css')}}">
@@ -43,7 +42,70 @@
 </head>
 <body>
     @if(Auth::check())
-    <div id="sidebar">
+    <div class="nav-side-menu">
+    <div class="brand">
+        <ul>
+             <li>
+                    <a href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                                 document.getElementById('logout-form').submit();">
+                        Cerrar sesión
+                    </a>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        {{ csrf_field() }}
+                    </form>
+                </li>
+        </ul>
+    </div>
+    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+  
+        <div class="menu-list">
+
+  
+            <ul id="menu-content" class="menu-content collapse out">
+
+                <li >
+                    <img id="perfil" src="{{ asset(Auth::user()->image)}}" alt="" class="img-responsive">
+                </li>
+                
+                <li>
+                  <a href="#">
+                  <i class="fa fa-user fa-lg"></i> Mi perfil
+                  </a>
+                  </li>
+
+               
+                 <li>
+                  <a href="#">
+                  <i class="fa fa-users fa-lg"></i> Usuarios
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                  <i class="fa fa-paper-plane fa-lg"></i> Inicio
+                  </a>
+                </li>
+               
+
+
+
+                <li data-toggle="collapse" data-target="#new" class="collapsed">
+                  <a href="#"><i class="fa fa-car fa-lg"></i> Programas De Formacion <span class="arrow"></span></a>
+                </li>
+                <ul class="sub-menu collapse" id="new">
+                  <li>Formacion Titulada</li>
+                  <li>Formacion Complementaria</li>
+                  <li>Formacion Virtual</li>
+                </ul>
+
+
+                 
+
+            </ul>
+     </div>
+</div>
+        <!-- <div id="sidebar">
         <div id="sidebar-content">
             <ul class="list-unstyled text-center">
                 <li>
@@ -60,80 +122,34 @@
                 <li >
                     <img id="perfil" src="{{ asset(Auth::user()->image)}}" alt="" class="img-responsive">
                 </li>
-                 <aside class="main-sidebar">
-        <!-- sidebar: style can be found in sidebar.less -->
-        <section class="sidebar">
-          <!-- Sidebar user panel -->
-                    
-          <!-- sidebar menu: : style can be found in sidebar.less -->
-          <ul class="sidebar-menu">
-            <li class="header"></li>
-            
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-laptop"></i>
-                <span>Almacén</span>
-                <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="almacen/articulo"><i class="fa fa-circle-o"></i> Artículos</a></li>
-                <li><a href="almacen/categoria"><i class="fa fa-circle-o"></i> Categorías</a></li>
-              </ul>
-            </li>
-            
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-th"></i>
-                <span>Compras</span>
-                 <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="compras/ingreso"><i class="fa fa-circle-o"></i> Ingresos</a></li>
-                <li><a href="compras/proveedor"><i class="fa fa-circle-o"></i> Proveedores</a></li>
-              </ul>
-            </li>
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-shopping-cart"></i>
-                <span>Ventas</span>
-                 <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="ventas/venta"><i class="fa fa-circle-o"></i> Ventas</a></li>
-                <li><a href="ventas/cliente"><i class="fa fa-circle-o"></i> Clientes</a></li>
-              </ul>
-            </li>
-                       
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-folder"></i> <span>Acceso</span>
-                <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="configuracion/usuario"><i class="fa fa-circle-o"></i> Usuarios</a></li>
+                <li  class="d">
+                    <a class="d" href="{{url('/admin')}}">Mi perfil</a>
+                </li>                
+                <li  class="d">
+                    <a class="d" href="{{url('/users')}}">Usuarios</a>
+                </li>
+                <li  class="d">
+                    <a class="d" href="{{url('/')}}">Inicio</a>
+                </li>
+               
                 
-              </ul>
-            </li>
-             <li>
-              <a href="#">
-                <i class="fa fa-plus-square"></i> <span>Ayuda</span>
-                <small class="label pull-right bg-red">PDF</small>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="fa fa-info-circle"></i> <span>Acerca De...</span>
-                <small class="label pull-right bg-yellow">IT</small>
-              </a>
-            </li>
-                        
-          </ul>
-        </section>
-        <!-- /.sidebar -->
-      </aside>
+               <li class="sub_top"><a class="pop" href=""> Programas De Formacion </a>
+                    <ul class="sub_cate">
+                        <li class="sub_menu2">
+                            <a class="redirect" href="">Formacion Titulada</a>
+                        </li>
+                        <li class="sub_menu2">
+                            <a class="redirect" href="">Formacion Complementaria</a>
+                        </li>
+                        <li class="sub_menu2">
+                            <a class="redirect" href="">Formacion Virtual</a>
+                        </li>
+                    </ul>
+                </li>
+
             </ul>
         </div>
-    </div>
+    </div> -->
     @endif
 
     
