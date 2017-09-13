@@ -18,9 +18,8 @@ class WelcomeController extends Controller
      */
     public function index()
     {
-        $empresas=Empresa::all();
         $slider_img = Slider_images::all();
-        return view('welcome', compact('slider_img','empresas'));
+        return view('welcome', compact('slider_img'));
 
         
        
@@ -93,4 +92,9 @@ class WelcomeController extends Controller
         //
     }
 
+    public function mostrarProgramas(){
+       $programs = Programs::all();
+        
+        return view('programas_formacion.for_com');
+    }
 }
