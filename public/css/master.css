@@ -2,9 +2,24 @@ html {
 	height: 100%;
 }
 body {
-  min-height: 100%;
+
   }.form-group  {
     position: relative;
+  }
+  .ball{
+       width: 1%;
+    height: 14px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #60cb01;
+    top: 99px;
+    right: 214px;
+  }
+  .online_mode{
+        position: absolute;
+    top: 83px;
+    right: 151px;
+    font-size: 12px;
   }
   .form-control:focus {
     border-color: transparent;
@@ -87,8 +102,14 @@ body {
   height: 100%;
   color: #e1ffff;
 }
+.user_name{
+      position: absolute;
+    top: 54px;
+    right: 65px;
+    font-size: 2rem;
+}
 .nav-side-menu .brand {
-  background-color: #23282e;
+  background-color: #2e353d;
   line-height: 50px;
   display: block;
   text-align: center;
@@ -176,6 +197,9 @@ body {
   width: 20px;
   padding-right: 20px;
 }
+.nav-side-menu li.diferentes:hover {
+
+}
 .nav-side-menu li:hover {
   border-left: 3px solid #d19b3d;
   background-color: #4f5b69;
@@ -229,6 +253,11 @@ body {
     margin:0;
 
   }
+  li.diferentes{
+        padding-left: 0px;
+    border-left: 3px solid #2e353d;
+    border-bottom: 1px solid #23282e;
+  }
   .elim, .edit{
     position: absolute;
     background-color:  rgba(255, 255, 255, 0.29);
@@ -238,12 +267,11 @@ body {
   }
 
 #perfil{
-    width: 215px;
-    height: 215px;
+    width: 91px;
+    height: 91px;
     padding: 10px;
     border-radius: 50%;
     position: relative;
-    left:30px;
     object-fit: cover;
   }
   #main-content {
