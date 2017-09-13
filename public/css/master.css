@@ -67,7 +67,7 @@ body {
   .hero-index {
 
     background-size: cover;
-}*/
+}
 .hero-index {
   position: relative; }
  
@@ -110,7 +110,7 @@ body {
     font-size: 2rem;
 }
 .nav-side-menu .brand {
-  background-color: #2e353d;
+  background-color: #2e353d;}
 
 .nav-side-menu .brand {
   background-color: #23282e;
