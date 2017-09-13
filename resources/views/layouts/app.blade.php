@@ -30,9 +30,6 @@
     <link rel="stylesheet" href="{{ asset('css/alert.default.css')}}">
     <link rel="stylesheet" href="{{ asset('css/alert.core.css')}}">
     <link rel="stylesheet" href="{{ asset('css/aos.css')}}">
-
-    
-
     <link rel="stylesheet" href="{{ asset('css/master.css')}}">
 
 
@@ -76,12 +73,6 @@
             <ul id="menu-content" class="menu-content collapse out">
 
 
-               
-
-                <li >
-                    <img id="perfil" src="{{ asset(Auth::user()->image)}}" alt="" class="img-responsive">
-                </li>
-
                 
                 <li>
                   <a href="#">
@@ -108,14 +99,11 @@
 
                   <a href="#"><i class="fa fa-columns fa-lg"></i> Programas De Formacion <span class="arrow"></span></a>
 
-                  <a href="#"><i class="fa fa-car fa-lg"></i> Programas De Formacion <span class="arrow"></span></a>
-
                 </li>
                 <ul class="sub-menu collapse" id="new">
-                  <li>Formacion Titulada</li>
-                  <li>Formacion Complementaria</li>
-                  <li>Formacion Virtual</li>
-                </ul>
+                  <a href="{{url('programas/')}}"><li>Formacion Titulada</li></a>
+                  <a href="{{url('')}}"><li>Formacion Complementaria</li></a>
+                  <a href="{{url('')}}"><li>Formacion Virtual</li></a>
 
 
                  
