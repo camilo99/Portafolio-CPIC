@@ -75,19 +75,19 @@
 
                 
                 <li>
-                  <a href="#">
+                  <a href="{{url('admin/')}}">
                   <i class="fa fa-user fa-lg"></i> Mi perfil
                   </a>
                   </li>
 
                
                  <li>
-                  <a href="#">
+                  <a href="{{url('users/')}}">
                   <i class="fa fa-users fa-lg"></i> Usuarios
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="/">
                   <i class="fa fa-paper-plane fa-lg"></i> Inicio
                   </a>
                 </li>
