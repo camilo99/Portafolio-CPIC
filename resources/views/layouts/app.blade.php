@@ -26,7 +26,6 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{asset ('css/font-awesome.min.css')}}">
     <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('css/gallerybox.css')}}">
     <link rel="stylesheet" href="{{ asset('css/animate.css')}}">
     <link rel="stylesheet" href="{{ asset('css/alert.default.css')}}">
     <link rel="stylesheet" href="{{ asset('css/alert.core.css')}}">
@@ -178,10 +177,9 @@
     <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('js/velocity.min.js') }}"></script>
     <script src="{{ asset('js/alert.min.js') }}"></script>
-    <script src="{{ asset('js/jquery.gallerybox.js') }}"></script>
     <script src="{{ asset('js/aos.js') }}"></script>
-
     <script src="{{ asset('js/site.js') }}"></script>
+    <script src="{{asset('js/gallery.js')}}"></script> 
 
 <script>
     $(document).ready(function() {
