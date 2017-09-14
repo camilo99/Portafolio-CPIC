@@ -39,78 +39,81 @@
 <body>
     @if(Auth::check())
     <div class="nav-side-menu">
-    <div class="brand">
-        <ul>
-             <li>
-                    <a href="{{ route('logout') }}"
-                        onclick="event.preventDefault();
-                                 document.getElementById('logout-form').submit();">
-                        Cerrar sesión
-                    </a>
 
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                        {{ csrf_field() }}
-                    </form>
-                </li>
-        </ul>
+        <div class="brand">
+            <!-- <ul>
+               <li>
+                <a href="{{ route('logout') }}"
+                onclick="event.preventDefault();
+                document.getElementById('logout-form').submit();">
+                Cerrar sesión
+            </a>
 
-         <li class="diferentes">
-                    <img id="perfil" src="{{ asset(Auth::user()->image)}}" alt="" class="img-responsive">
-                    <div class="wala">
-                        
-                    </div>
-                    <span class="user_name pull-left">{{ (Auth::user()->name)}}</span>
-                    <button class="ball"></button>
-                    <span class="online_mode">En Linea</span>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                {{ csrf_field() }}
+            </form>
         </li>
-
-    </div>
-    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
-  
-        <div class="menu-list">
-
-  
-            <ul id="menu-content" class="menu-content collapse out">
-
-
+    </ul> -->
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+        <img id="perfil" src="{{ asset(Auth::user()->image)}}" alt="" class="img-responsive text-center">
                 
-                <li>
-                  <a href="{{url('admin/')}}">
-                  <i class="fa fa-user fa-lg"></i> Mi perfil
-                  </a>
-                  </li>
+            </div>
+        </div>
+     
+       
 
-               
-                 <li>
-                  <a href="{{url('users/')}}">
-                  <i class="fa fa-users fa-lg"></i> Usuarios
-                  </a>
-                </li>
-                <li>
-                  <a href="/">
-                  <i class="fa fa-paper-plane fa-lg"></i> Inicio
-                  </a>
-                </li>
-               
+        </div>
+<i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+
+<div class="menu-list">
+
+
+    <ul id="menu-content" class="menu-content collapse out">
 
 
 
-                <li data-toggle="collapse" data-target="#new" class="collapsed">
-
-                  <a href="#"><i class="fa fa-columns fa-lg"></i> Programas De Formacion <span class="arrow"></span></a>
-
-                </li>
-                <ul class="sub-menu collapse" id="new">
-                  <a href="{{url('programas/')}}"><li>Formacion Titulada</li></a>
-                  <a href="{{url('')}}"><li>Formacion Complementaria</li></a>
-                  <a href="{{url('')}}"><li>Formacion Virtual</li></a>
+        <li>
+          <a href="{{url('admin/')}}">
+              <i class="fa fa-user fa-lg"></i> Mi perfil
+          </a>
+      </li>
 
 
-                 
+      <li>
+          <a href="{{url('users/')}}">
+              <i class="fa fa-users fa-lg"></i> Usuarios
+          </a>
+      </li>
+      <li>
+          <a href="/">
+              <i class="fa fa-paper-plane fa-lg"></i> Inicio
+          </a>
+      </li>
+  </ul>
 
-            </ul>
-     </div>
+
+
+  <li data-toggle="collapse" data-target="#new" class="collapsed">
+
+      <a href="#"><i class="fa fa-columns fa-lg"></i> Programas De Formacion <span class="arrow"></span></a>
+
+  </li>
+  <ul class="sub-menu collapse" id="new">
+      <a href="{{url('programas/')}}"><li>Formacion Titulada</li></a>
+      <a href="{{url('')}}"><li>Formacion Complementaria</li></a>
+      <a href="{{url('')}}"><li>Formacion Virtual</li></a>
+
+
+
+
+  </ul>
 </div>
+</div>
+
+
+
+
         <!-- <div id="sidebar">
         <div id="sidebar-content">
             <ul class="list-unstyled text-center">
@@ -159,26 +162,18 @@
     @endif
 
     
-        <ul class="dropdown-menu" role="menu">
-            
-        </ul>
+    <ul class="dropdown-menu" role="menu">
 
-        
-        <div id="{{ Auth::check() ? 'main-content' : ''}}">
-            @yield('content')   
-             @yield('footer')         
-        </div>
-      
-
-            
-       
+    </ul>
 
 
-
+    <div id="{{ Auth::check() ? 'main-content' : ''}}">
+        @yield('content')   
+        @yield('footer')         
     </div>
 
 
-    <!-- Scripts -->
+
 
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
@@ -189,14 +184,14 @@
 
 <script>
     $(document).ready(function() {
-              $('form').on('click', '.btn-delete', function(event) {
+      $('form').on('click', '.btn-delete', function(event) {
         event.preventDefault();
         if (confirm("Realmente desea eliminar este elemento?")) {
           $(this).parent().submit();
-        }
-      });
+      }
+  });
 
-    });
+  });
 </script>
 @stack('scripts')
 
