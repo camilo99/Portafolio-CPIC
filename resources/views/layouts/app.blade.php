@@ -186,7 +186,6 @@
     <script src="{{ asset('js/alert.min.js') }}"></script>
     <script src="{{ asset('js/aos.js') }}"></script>
     <script src="{{ asset('js/site.js') }}"></script>
-    <script src="{{asset('js/gallery.js')}}"></script> 
 
 <script>
     $(document).ready(function() {

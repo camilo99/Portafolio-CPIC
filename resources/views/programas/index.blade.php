@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('title', 'Portafolio CPIC')
+@include('layouts.navbar')
 
 @section('content')
 <div class="col-md-12">
