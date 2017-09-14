@@ -175,21 +175,12 @@
 
 
 
-
-
-
-</div>
-
-
-<!-- Scripts -->
-
-<script src="{{ asset('js/app.js') }}"></script>
-<script src="{{ asset('js/owl.carousel.min.js') }}"></script>
-<script src="{{ asset('js/velocity.min.js') }}"></script>
-<script src="{{ asset('js/alert.min.js') }}"></script>
-<script src="{{ asset('js/aos.js') }}"></script>
-<script src="{{ asset('js/site.js') }}"></script>
-<script src="{{asset('js/gallery.js')}}"></script> 
+    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('js/velocity.min.js') }}"></script>
+    <script src="{{ asset('js/alert.min.js') }}"></script>
+    <script src="{{ asset('js/aos.js') }}"></script>
+    <script src="{{ asset('js/site.js') }}"></script>
 
 <script>
     $(document).ready(function() {
