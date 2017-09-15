@@ -191,6 +191,7 @@
       <script src="{{ asset('js/aos.js') }}"></script>
       <script src="{{ asset('js/site.js') }}"></script>
 
+
       <script>
         $(document).ready(function() {
           $('form').on('click', '.btn-delete', function(event) {
@@ -202,28 +203,7 @@
 
         });
       </script>
-      <script>
 
-        var images = [
-        @foreach($slider_img as $img)
-        '{{asset($img->imagen)}}',
-        @endforeach
-        ];
-
-        $(function() {
-          $('#gallery').imagesGrid({
-            images: [
-              @foreach($slider_img as $img)
-              '{{asset($img->imagen)}}',
-              @endforeach
-            ],
-            align: true,
-            getViewAllText: function(imgsCount) { return 'Ver más' }
-          });
-
-        });
-
-      </script>
 
       @stack('scripts')
 
