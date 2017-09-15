@@ -10,18 +10,6 @@
 
     <title>{{ config('app.name', 'PORTAFOLIO') }}</title>
 
-    <style>
-        a.d:hover{
-            text-decoration: none;
-        }
-        li.d:hover{
-            background-color: #fff;
-        }
-        li.d{
-            padding: 5px;
-
-        }
-    </style>
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{asset ('css/font-awesome.min.css')}}">
