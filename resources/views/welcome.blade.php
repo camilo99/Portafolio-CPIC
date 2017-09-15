@@ -156,7 +156,7 @@
 					<img class="img_pagi" src="{{ asset('images/1504897601.png') }}" alt="...">
 					<div class="caption">
 						<h3></h3>
-						<p>Es un programa de innovación tecnológica del ServicioNacional de Aprendizaje dirigida a todos los Colombianos, que actúa como acelerador para el desarrollo de proyectos de I+D+i materializados en prototipos funcionales en cuatro líneas tecnológicas: Electrónica y Telecomunicaciones, Tecnologías Virtuales, Ingeniería y diseño y Biotecnología nanotecnología, que promueva el emprendimiento de base tecnológica.</p>
+						<p>Es un programa de innovación tecnológica del ServicioNacional de Aprendizaje dirigida a todos los Colombianos, que actúa como acelerador para el desarrollo de proyectos de I+D+i materializados en prototipos funcionales en cuatro líneas tecnológicas: Electrónica y Telecomunicaciones, Tecnologías Virtuales, Ingeniería y diseño.</p>
 						<a href="http://tecnoparque.sena.edu.co/" class="btn btn-primary" role="button">Mas Informacion</a>
 					</div>
 				</div>
@@ -166,7 +166,7 @@
 					<img class="img_pagi" src="{{ asset('images/1504897630.png') }}" alt="...">
 					<div class="caption">
 						<h3></h3>
-						<p>El Sistema de Investigación, Desarrollo Tecnológico e Investigación (SENNOVA) tiene el propósito de fortalecer los estándares de calidad y pertinencia, en las áreas de investigación, desarrollo tecnológico e innovación, de la formación profesional impartida en la Entidad.</p>
+						<p>El Sistema de Investigación, Desarrollo Tecnológico e Investigación (SENNOVA) tiene el propósito de fortalecer los estándares de calidad y pertinencia, en las áreas de investigación, desarrollo tecnológico e innovación, de la formación profesional impartida en la entidad, identifica oportunidades e ideas de negocios, </p>
 						<a href="http://www.sena.edu.co/es-co/formacion/Paginas/tecnologia-innovacion.aspx" class="btn btn-primary" role="button">Mas Informacion</a>
 					</div>
 				</div>
@@ -287,7 +287,7 @@
 			<div  data-aos="fade-left" data-aos-once="true" class="col-md-5 col-md-offset-6">
 
 				<div class="card-info">
-					<span class="icono-convive fa fa-handshake-o fa-3x"></span>
+					<span class="icono-convive fa fa-venus-mars fa-3x"></span>
 					<h5><strong>CONVIVENCIA</strong><br></h5>
 					<p>
 						Fomenta ambientes de convivencia y participación social a través de espacios de reflexión como actores activos en la construcción de una paz duradera y estable, enfocada en la formación profesional integral.
