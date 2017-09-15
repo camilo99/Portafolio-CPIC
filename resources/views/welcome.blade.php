@@ -303,13 +303,13 @@
 
 
 <section class="galeria">
-	<div class="container-fluid">
+	<div class="container-fluid" style="background: -webkit-linear-gradient(top, #fff , #cecece)">
 		<div class="row">
 			<div class="col-md-5">
 				<h1 class="text-center">Galeria CPIC</h1>
 			</div>
 			<div class="col-md-7">
-				<div class="container-gallery" id="gallery" style="border: 1px solid red">
+				<div class="container-gallery" id="gallery">
 					
 				</div>
 				
