@@ -387,3 +387,27 @@
 
 		</footer>
 		@endsection
+@push('scripts')
+      <script>
+
+        var images = [
+        @foreach($slider_img as $img)
+        '{{asset($img->imagen)}}',
+        @endforeach
+        ];
+
+        $(function() {
+          $('#gallery').imagesGrid({
+            images: [
+              @foreach($slider_img as $img)
+              '{{asset($img->imagen)}}',
+              @endforeach
+            ],
+            align: true,
+            getViewAllText: function(imgsCount) { return 'Ver más' }
+          });
+
+        });
+
+      </script>
+@endpush

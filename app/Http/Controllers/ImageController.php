@@ -14,9 +14,7 @@ class ImageController extends Controller
      */
     public function index()
     {
-        return view("images.index")
-            ->with('query', Image::paginate(6)
-            ->setPath('image'));
+        return view("imagenes.index");
     }
 
     /**
