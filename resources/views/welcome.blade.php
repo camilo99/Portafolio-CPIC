@@ -400,32 +400,33 @@
 
 
 			</div>
-		</div>
-		<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>	
 
-	</footer>
-	@endsection
-	@push('scripts')
-	<script>
+			<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>	
 
-		var images = [
-		@foreach($slider_img as $img)
-		'{{asset($img->imagen)}}',
-		@endforeach
-		];
+		</footer>
+		@endsection
+@push('scripts')
+      <script>
 
-		$(function() {
-			$('#gallery').imagesGrid({
-				images: [
-				@foreach($slider_img as $img)
-				'{{asset($img->imagen)}}',
-				@endforeach
-				],
-				align: true,
-				getViewAllText: function(imgsCount) { return 'Ver más' }
-			});
+        var images = [
+        @foreach($imagen as $img)
+        '{{asset($img->imagen)}}',
+        @endforeach
+        ];
 
-		});
+        $(function() {
+          $('#gallery').imagesGrid({
+            images: [
+              @foreach($imagen as $img)
+              '{{asset($img->imagen)}}',
+              @endforeach
+            ],
+            align: true,
+            getViewAllText: function(imgsCount) { return 'Ver más' }
+          });
 
-	</script>
-	@endpush
+        });
+
+      </script>
+@endpush
+

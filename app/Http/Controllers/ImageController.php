@@ -14,6 +14,7 @@ class ImageController extends Controller
      */
     public function index()
     {
+        $image = Image::all();
         return view("imagenes.index");
     }
 
@@ -24,7 +25,7 @@ class ImageController extends Controller
      */
     public function create()
     {
-        //
+        return view("imagenes.create");
     }
 
     /**
@@ -35,7 +36,15 @@ class ImageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $img = new Image();
+        if ($request->hasFile('imagen')) {
+            $file = time().'.'.$request->imagen->getClientOriginalExtension();
+            $request->imagen->move(public_path('images'), $file);
+        }
+        $img->imagen = '/images/'.$file;
+        if($img->save()) {
+            return redirect('imagenes')->with('status', 'Holi!');            
+        }
     }
 
     /**

@@ -44,6 +44,17 @@ jQuery(document).ready(function($) {
                 }
               });
  });
+
+
+  
+          $('#upload').hide();
+        $('.btn-upload').click(function() {
+            $('#upload').click();
+        });
+
+
+
+
   var owl = $(".owl-carousel");
   owl.owlCarousel({
     items: 1,
