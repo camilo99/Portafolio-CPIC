@@ -21,9 +21,9 @@ class WelcomeController extends Controller
      */
     public function index()
     {
-        $image = Image::all();
+        $imagen = Image::all();
         $slider_img = Slider_images::all();
-        return view('welcome', compact('slider_img', 'image'));
+        return view('welcome', compact('slider_img', 'imagen'));
 
         
        
