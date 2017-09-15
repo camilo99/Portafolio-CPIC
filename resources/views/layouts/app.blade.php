@@ -41,7 +41,7 @@
     <div class="nav-side-menu">
 
         <div class="brand">
-            <!-- <ul>
+           <!-- <ul>
                <li>
                 <a href="{{ route('logout') }}"
                 onclick="event.preventDefault();
@@ -53,17 +53,36 @@
                 {{ csrf_field() }}
             </form>
         </li>
-    </ul> -->
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3">
-        <img id="perfil" src="{{ asset(Auth::user()->image)}}" alt="" class="img-responsive text-center">
-                
-            </div>
-        </div>
-     
-       
+    </ul>  -->
 
-        </div>
+    <img id="perfil" src="{{ asset(Auth::user()->image)}}" alt="" class="img-responsive center-block">
+
+
+
+    <ul>
+
+     <li id="diferente" data-toggle="collapse" data-target="#new2" class="collapsed">
+        <a class="a_hover" href="#" class="">{{ (Auth::user()->name)}}<span class="arrowtwo"></span></a>
+    </li>
+</ul>
+<ul class="sub-menu collapse" id="new2">
+    <li id="diferente">
+        <a href="{{ route('logout') }}"
+        onclick="event.preventDefault();
+        document.getElementById('logout-form').submit();">
+        Cerrar sesión
+    </a>
+
+    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+        {{ csrf_field() }}
+    </form>
+</li>
+</ul>
+
+
+
+
+</div>
 <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
 
 <div class="menu-list">
@@ -74,19 +93,19 @@
 
 
         <li>
-          <a href="{{url('admin/')}}">
+          <a href="{{url('/admin')}}">
               <i class="fa fa-user fa-lg"></i> Mi perfil
           </a>
       </li>
 
 
       <li>
-          <a href="{{url('users/')}}">
+          <a href="{{url('/users')}}">
               <i class="fa fa-users fa-lg"></i> Usuarios
           </a>
       </li>
       <li>
-          <a href="/">
+          <a href="{{url('/')}}">
               <i class="fa fa-paper-plane fa-lg"></i> Inicio
           </a>
       </li>
@@ -100,9 +119,9 @@
 
   </li>
   <ul class="sub-menu collapse" id="new">
-      <a href="{{url('programas/')}}"><li>Formacion Titulada</li></a>
-      <a href="{{url('')}}"><li>Formacion Complementaria</li></a>
-      <a href="{{url('')}}"><li>Formacion Virtual</li></a>
+      <a class="sub-dos" href="{{url('programas/')}}"><li>Formacion Titulada</li></a>
+      <a class="sub-dos" href="{{url('')}}"><li>Formacion Complementaria</li></a>
+      <a class="sub-dos" href="{{url('')}}"><li>Formacion Virtual</li></a>
 
 
 
