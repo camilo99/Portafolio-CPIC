@@ -99,6 +99,11 @@
 	</div>
 </div>
 </nav>
+<nav class="social-networks-right">
+                <a href="" class=""><i class="fa fa-reply fa-2x"></i></a>
+             
+      </nav>
+
 @endif
 <section class="slider">
 	<header class="jumbotron jumbotron-index hero-index">
