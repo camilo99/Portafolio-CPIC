@@ -99,6 +99,11 @@
 	</div>
 </div>
 </nav>
+<nav class="social-networks-right">
+                <a href="" class=""><i class="fa fa-reply fa-2x"></i></a>
+             
+      </nav>
+
 @endif
 <section class="slider">
 	<header class="jumbotron jumbotron-index hero-index">
@@ -370,10 +375,10 @@
 			</div>
 
 			<div class="col-md-5 etica_sena">
-				<img  src="{{asset('imgs/icontecA.png')}}">
-				<img src="{{asset('imgs/icontecB.png')}}">
-				<img  src="{{asset('imgs/icontecC.png')}}">
-				<img  src="{{asset('imgs/icontecD.png')}}">
+				<img  class="" src="{{asset('imgs/icontecA.png')}}">
+				<img  class="" src="{{asset('imgs/icontecB.png')}}">
+				<img  class="" src="{{asset('imgs/icontecC.png')}}">
+				<img  class="" src="{{asset('imgs/icontecD.png')}}">
 				<ul class="fecha_ini">
 					<li  class="fecha_mod">Última modificación: 
 						16/08/2017 11:18 a. m.</li>

@@ -78,7 +78,7 @@
 							<div class="panel panel-default">
 								<div class="panel-heading" role="tab" id="headingsOne">
 									<h4 class="panel-title">
-										<a role="button" data-toggle="collapse" data-parent="#sub-accordion" href="#collapses{{$count++}}" aria-expanded="true" id="button_co" aria-controls="collapsesOne">
+										<a role="button" data-toggle="collapse" data-parent="#sub-accordion" href="#collapses{{$count++}}" aria-expanded="true" aria-controls="collapsesOne">
 											{{$pro->nombre_programa}} 
 										</a>
 									</h4>

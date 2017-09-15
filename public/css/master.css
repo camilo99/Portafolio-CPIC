@@ -70,7 +70,7 @@ section.acordeon{
 }
 .hero-index {
   position: relative; }
-  
+
   .hero-index:after {
 
     bottom: 0rem;
@@ -321,6 +321,16 @@ section.acordeon{
   li#diferente:hover{
     background-color:transparent;
   }
+  .social-networks-right a {
+    background-color: #f2f2f2;
+    color: #4e4e4e;
+    border-radius: 0.4rem;
+    display: block;
+    margin-bottom: 1rem;
+    margin-right: 0.5rem;
+    padding: 0.4rem;
+    text-align: center;
+}
 
   #perfil{
     width: 91px;
@@ -329,6 +339,13 @@ section.acordeon{
     position: relative;
     object-fit: cover;
     margin-top:15px;
+  }
+  .social-networks-right {
+    display: block;
+    position: fixed;
+    top: 50vh;
+    right: 0;
+    z-index: 10;
   }
   #main-content {
     margin-left: 260px;
@@ -624,7 +641,7 @@ ul.nav.navbar-nav.navbar-right li.sub_top:hover > ul.sub_cate {
 
 }
 .icono-cultura{
-  
+
   left: -36px;
   color: #0C6C6B;
 }
