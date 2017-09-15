@@ -391,7 +391,7 @@
       <script>
 
         var images = [
-        @foreach($slider_img as $img)
+        @foreach($imagen as $img)
         '{{asset($img->imagen)}}',
         @endforeach
         ];
@@ -399,7 +399,7 @@
         $(function() {
           $('#gallery').imagesGrid({
             images: [
-              @foreach($slider_img as $img)
+              @foreach($imagen as $img)
               '{{asset($img->imagen)}}',
               @endforeach
             ],

@@ -17,7 +17,8 @@
 
 Auth::routes();
 
-Route::get('/imagenes','ImageController@index');
+
+Route::resource('/imagenes','ImageController');
 
 
 Route::get('/', 'WelcomeController@index');
