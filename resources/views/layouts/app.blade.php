@@ -25,6 +25,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{asset ('css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{asset ('css/images-grid.css')}}">
     <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css')}}">
     <link rel="stylesheet" href="{{ asset('css/animate.css')}}">
     <link rel="stylesheet" href="{{ asset('css/alert.default.css')}}">
@@ -196,6 +197,7 @@
 
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('js/images-grid.js') }}"></script>
     <script src="{{ asset('js/velocity.min.js') }}"></script>
     <script src="{{ asset('js/alert.min.js') }}"></script>
     <script src="{{ asset('js/aos.js') }}"></script>
@@ -212,6 +214,35 @@
 
   });
 </script>
+        <script>
+
+            var images = [
+                'https://unsplash.it/1300/800?image=875',
+                'https://unsplash.it/1300/800?image=874',
+                'https://unsplash.it/1300/800?image=872',
+                'https://unsplash.it/1300/800?image=868',
+                'https://unsplash.it/1300/800?image=839',
+                'https://unsplash.it/1300/800?image=838'
+            ];
+
+            $(function() {
+                $('#gallery').imagesGrid({
+                    images: [
+                        'https://unsplash.it/660/440?image=875',
+                'https://unsplash.it/660/990?image=874',
+                'https://unsplash.it/660/440?image=872',
+                'https://unsplash.it/750/500?image=868',
+                'https://unsplash.it/660/990?image=839',
+                'https://unsplash.it/660/455?image=838'
+                    ],
+                    align: true,
+                    getViewAllText: function(imgsCount) { return 'View all' }
+                });
+
+            });
+
+        </script>
+
 @stack('scripts')
 
 </body>

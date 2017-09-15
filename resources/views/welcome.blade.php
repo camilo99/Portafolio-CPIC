@@ -303,42 +303,14 @@
 
 
 <section class="galeria">
-	<div class="container-fluid">
+	<div class="container-fluid" style="background: -webkit-linear-gradient(top, #fff , #cecece)">
 		<div class="row">
 			<div class="col-md-5">
 				<h1 class="text-center">Galeria CPIC</h1>
 			</div>
 			<div class="col-md-7">
-				<div class="container-gallery" style="border: 1px solid red">
-					<div class="container">
-					  <div class="sample1">
-					    <div class="carousel">
-					      <ul>
-					        <li> <img src="https://unsplash.it/500/300?image=655" alt="Description for photo 1"> </li>
-					        <li> <img src="https://unsplash.it/500/300?image=659" alt="Description for photo 2"> </li>
-					        <li> <img src="https://unsplash.it/500/300?image=653" alt="Description for photo 3"> </li>
-					        <li> <img src="https://unsplash.it/500/300?image=654" alt="Description forof photo 4"> </li>
-					      </ul>
-					      <div class="controls">
-					        <div class="prev"></div>
-					        <div class="next"></div>
-					      </div>
-					    </div>
-					    <div class="thumbnails">
-					      <ul>
-					        <li> <img src="https://unsplash.it/200/200?image=655" alt="Description for photo 1"> </li>
-					        <li> <img src="https://unsplash.it/200/200?image=659" alt="Description for photo 2"> </li>
-					        <li> <img src="https://unsplash.it/200/200?image=653" alt="Description for photo 3"> </li>
-					        <li> <img src="https://unsplash.it/200/200?image=654" alt="Description for photo 4"> </li>
-					      </ul>
-					    </div>
-					  </div>
-					  <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script> 
-					  <script src="jquery.light-carousel.js"></script> 
-					  <script>
-					$('.sample1').lightCarousel();
-					</script> 
-					</div>
+				<div class="container-gallery" id="gallery">
+					
 				</div>
 				
 			</div>
