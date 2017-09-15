@@ -102,21 +102,21 @@
 
 <!-- Modal -->
 <div class="modal fade" id="myModala" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+			</div>
+			<div class="modal-body">
+				...
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Save changes</button>
+			</div>
+		</div>
+	</div>
 </div>
 <nav class="social-networks-right">
 	<a  href="#" data-toggle="modal" data-target="#myModala"><i class="fa fa-reply fa-2x"></i></a>
@@ -400,33 +400,34 @@
 
 
 			</div>
+		</div>
 
-			<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>	
+		<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>	
 
-		</footer>
-		@endsection
-@push('scripts')
-      <script>
+	</footer>
+	@endsection
+	@push('scripts')
+	<script>
 
-        var images = [
-        @foreach($imagen as $img)
-        '{{asset($img->imagen)}}',
-        @endforeach
-        ];
+		var images = [
+		@foreach($imagen as $img)
+		'{{asset($img->imagen)}}',
+		@endforeach
+		];
 
-        $(function() {
-          $('#gallery').imagesGrid({
-            images: [
-              @foreach($imagen as $img)
-              '{{asset($img->imagen)}}',
-              @endforeach
-            ],
-            align: true,
-            getViewAllText: function(imgsCount) { return 'Ver más' }
-          });
+		$(function() {
+			$('#gallery').imagesGrid({
+				images: [
+				@foreach($imagen as $img)
+				'{{asset($img->imagen)}}',
+				@endforeach
+				],
+				align: true,
+				getViewAllText: function(imgsCount) { return 'Ver más' }
+			});
 
-        });
+		});
 
-      </script>
-@endpush
+	</script>
+	@endpush
 
