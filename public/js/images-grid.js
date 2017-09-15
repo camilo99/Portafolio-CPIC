@@ -472,16 +472,16 @@
                     class: 'modal-control left',
                     click: this.prev
                 }).append(
-                    $('<div>', {
-                        class: 'fa fa-chevron-left fa-4'
+                    $('<i>', {
+                        class: 'fa fa-chevron-left fa-4x'
                     })
                 ),
                 $('<div>', {
                     class: 'modal-control right',
                     click: this.next
                 }).append(
-                    $('<div>', {
-                        class: 'fa fa-chevron-right fa-4'
+                    $('<i>', {
+                        class: 'fa fa-chevron-right fa-4x'
                     })
                 )
             )
