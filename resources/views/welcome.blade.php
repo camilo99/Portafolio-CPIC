@@ -99,33 +99,45 @@
 	</div>
 </div>
 </nav>
-<nav class="social-networks-right">
-                <a href="" class=""><i class="fa fa-reply fa-2x"></i></a>
-             
-      </nav>
 
+<!-- Modal -->
+<div class="modal fade" id="myModala" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<nav class="social-networks-right">
+	<a  href="#" data-toggle="modal" data-target="#myModala"><i class="fa fa-reply fa-2x"></i></a>
+</nav>
 @endif
 <section class="slider">
 	<header class="jumbotron jumbotron-index hero-index">
-	@if(Auth::check())
-				<a style="position: absolute;z-index: 999; right: 130px; top: 36px;" class="btn btn-success" href="{{ url('slider/create') }}"> 
-						Añadir Imagen
-				</a>
+		@if(Auth::check())
+		<a style="position: absolute;z-index: 999; right: 130px; top: 36px;" class="btn btn-success" href="{{ url('slider/create') }}"> 
+			Añadir Imagen
+		</a>
 		@endif
 		<div class="owl-carousel" id="Thinker">
 
 			@foreach($slider_img as $img)
 			<div class="imageContainer">
-			@if(Auth::check())
+				@if(Auth::check())
 
-				<a  style="    position: absolute;
-    top: 38px;
-    z-index: 999;
-    /* border: 1px solid red; */
-    /* left: 0; */
-    right: 0;" href="{{ url('slider/'.$img->id.'/edit') }}" class="btn btn-default"> Editar Imagen </a>
-					
-			@endif
+				<a  style="position: absolute;top: 38px;z-index: 999;right: 0;" href="{{ url('slider/'.$img->id.'/edit') }}" class="btn btn-default"> Editar Imagen </a>
+
+				@endif
 				<img class="featured-image img-responsive" src="{{asset ($img->imagen)}}" alt="hero">   
 				
 			</div>
@@ -187,7 +199,7 @@
 				</div>
 			</div>
 		</div>		
-				
+
 	</div>
 
 </section>
@@ -324,15 +336,16 @@
 </section>
 
 
+
 @endsection
 
 @section('footer')
 <footer class="Imagine_dreamer">
 
 	<div class="container">
-			
-			
-				
+
+
+
 		
 
 		<div class="">
@@ -382,12 +395,12 @@
 				<ul class="fecha_ini">
 					<li  class="fecha_mod">Última modificación: 
 						16/08/2017 11:18 a. m.</li>
-				</ul>
-					</div>
-
-
+					</ul>
 				</div>
+
+
 			</div>
+
 			<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>	
 
 		</footer>
@@ -416,3 +429,4 @@
 
       </script>
 @endpush
+
