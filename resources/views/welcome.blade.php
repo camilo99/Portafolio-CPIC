@@ -309,7 +309,7 @@
 				<h1 class="text-center">Galeria CPIC</h1>
 			</div>
 			<div class="col-md-7">
-				<div class="container-gallery" id="gallery">
+				<div class="container-gallery" id="gallery" style="border: 1px solid black">
 					
 				</div>
 				

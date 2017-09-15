@@ -8,6 +8,9 @@ use App\Slider_images;
 
 use App\Empresa;
 
+use App\Image;
+
+
 
 class WelcomeController extends Controller
 {
@@ -18,8 +21,9 @@ class WelcomeController extends Controller
      */
     public function index()
     {
+        $image = Image::all();
         $slider_img = Slider_images::all();
-        return view('welcome', compact('slider_img'));
+        return view('welcome', compact('slider_img', 'image'));
 
         
        
