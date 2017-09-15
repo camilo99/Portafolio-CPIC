@@ -473,7 +473,7 @@
                     click: this.prev
                 }).append(
                     $('<div>', {
-                        class: 'arrow left'
+                        class: 'fa fa-chevron-left fa-4'
                     })
                 ),
                 $('<div>', {
@@ -481,7 +481,7 @@
                     click: this.next
                 }).append(
                     $('<div>', {
-                        class: 'arrow right'
+                        class: 'fa fa-chevron-right fa-4'
                     })
                 )
             )
