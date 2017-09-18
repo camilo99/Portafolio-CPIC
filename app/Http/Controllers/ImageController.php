@@ -15,7 +15,7 @@ class ImageController extends Controller
     public function index()
     {
         $image = Image::all();
-        return view("imagenes.index");
+        return view("imagenes.index")->with('image', $image);
     }
 
     /**
@@ -89,6 +89,7 @@ class ImageController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Image::destroy($id);
+        return redirect('imagenes')->with('status', 'El usuario fue eliminado con exito!');
     }
 }
