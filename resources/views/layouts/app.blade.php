@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="{{ asset('css/alert.default.css')}}">
   <link rel="stylesheet" href="{{ asset('css/alert.core.css')}}">
   <link rel="stylesheet" href="{{ asset('css/aos.css')}}">
+
   <link rel="stylesheet" href="{{ asset('css/master.css')}}">
 
 
@@ -189,6 +190,7 @@
       <script src="{{ asset('js/velocity.min.js') }}"></script>
       <script src="{{ asset('js/alert.min.js') }}"></script>
       <script src="{{ asset('js/aos.js') }}"></script>
+      
       <script src="{{ asset('js/site.js') }}"></script>
 
 

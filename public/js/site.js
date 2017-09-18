@@ -47,15 +47,15 @@ jQuery(document).ready(function($) {
 
 
   
-          $('#upload').hide();
-        $('.btn-upload').click(function() {
-            $('#upload').click();
-        });
+  $('#upload').hide();
+  $('.btn-upload').click(function() {
+    $('#upload').click();
+  });
 
 
 
 
-  var owl = $(".owl-carousel");
+  var owl = $("#thinker");
   owl.owlCarousel({
     items: 1,
     loop: true,
@@ -86,6 +86,16 @@ jQuery(document).ready(function($) {
   $('.modal').on('shown.bs.modal', function () {
     $(this).find('[autofocus]').focus();
 
+  });
+  var owl = $("#dreamer");
+  owl.owlCarousel({
+    items: 2,
+    loop: true,
+    autoplay: true,
+    autoPlaySpeed: 3000,
+    autoPlayTimeout: 3000,
+    autoplayHoverPause: true,
+    margin:0
   });
 
 });
