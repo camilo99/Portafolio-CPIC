@@ -157,7 +157,7 @@
 			</div>
 
 
-			
+
 		</div>
 		<div class="modal-footer">
 			<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
@@ -373,6 +373,7 @@
 			<div class="col-md-5">
 				<h1 class="text-center" style="font-size: 3em;">Galeria CPIC</h1>
 				<div class="redonda col-md-2 col-md-offset-5" style="height: 100px; width: 100px; background-color: rgba(192, 192, 192, 0.45); border-radius: 50%;"><i class="fa fa-picture-o fa-4x" style="margin-top: 19px;margin-left: 5px; color: rgba(12, 108, 107, 0.86);"></i> </div>
+				
 				
 			</div>
 			<div class="col-md-7">

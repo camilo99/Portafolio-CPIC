@@ -89,6 +89,7 @@ class ImageController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Image::destroy($id);
+        return redirect('imagenes')->with('status', 'El usuario fue eliminado con exito!');
     }
 }
