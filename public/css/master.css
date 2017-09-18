@@ -38,6 +38,16 @@ body {
       right: 225px;
       border:0;
     }
+
+    .primer_mas{
+
+      color: #f7f7f7;
+      position: absolute;
+      right: 1rem;
+      top: 7rem;
+
+      font-size: 75px;
+    }
     .modal-cabeza{
       background: #F5F5F5;
       width: 1024px;
@@ -73,6 +83,7 @@ body {
     }
     .image_news{
       position: relative;
+      object-fit: cover;
       height: 50vh !important;
       padding:0 100px;
     }
@@ -923,7 +934,6 @@ a.pola:hover {
   text-align:center;
   width: 50px;
   height: 50px;
-
   background-color: #fff;
 }
 .social_networks{
