@@ -345,21 +345,21 @@
 								</p>
 							</div>
 						</div>
-
-					</div>
+            </div>
 					<div class="row">
 
-						<div  data-aos="fade-left" data-aos-once="true" class="col-md-5 col-md-offset-6">
+              <div  data-aos="fade-left" data-aos-once="true" class="col-md-5 col-md-offset-6">
 
-							<div class="card-info">
-								<span class="icono-convive fa fa-venus-mars fa-3x"></span>
-								<h5><strong>CONVIVENCIA</strong><br></h5>
-								<p>
-									Fomenta ambientes de convivencia y participación social a través de espacios de reflexión como actores activos en la construcción de una paz duradera y estable, enfocada en la formación profesional integral.
-								</p>
-							</div>
-						</div>
-					</div>
+                <div class="card-info">
+                  <span class="icono-convive fa fa-venus-mars fa-3x"></span>
+                  <h5><strong>CONVIVENCIA</strong><br></h5>
+                  <p>
+                    Fomenta ambientes de convivencia y participación social a través de espacios de reflexión como actores activos en la construcción de una paz duradera y estable, enfocada en la formación profesional integral.
+                  </p>
+                </div>
+              </div>
+            </div>
+
 
 
 
@@ -367,21 +367,27 @@
 			</section>
 
 
-			<section class="galeria">
-				<div class="container-fluid" style="background: -webkit-linear-gradient(top, #fff , #cecece)">
-					<div class="row">
-						<div class="col-md-5">
-							<h1 class="text-center">Galeria CPIC</h1>
-						</div>
-						<div class="col-md-7">
-							<div class="container-gallery" id="gallery" style="border: 1px solid black">
-
-							</div>
-
-						</div>
-					</div>
+<section class="galeria">
+	<div class="container-fluid" style="background: -webkit-linear-gradient(top, #fff , #cecece)">
+		<div class="row">
+			<div class="col-md-5">
+				<h1 class="text-center">Galeria CPIC</h1>
+				<div class="redonda col-md-6 col-md-offset-3" style="border: 1px solid red; height: 90px; width: 90px; background-color: black; border-radius: 50%;"><i class="fa fa-picture-o fa-4x" style="padding: 13px;"></i> </div>
+				
+			</div>
+			<div class="col-md-7">
+				<div class="container-gallery" id="gallery" style="border: 1px solid black">
+					
 				</div>
-			</section>
+				
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+
 
 
 
