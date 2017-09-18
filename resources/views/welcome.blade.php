@@ -324,6 +324,8 @@
 		<div class="row">
 			<div class="col-md-5">
 				<h1 class="text-center">Galeria CPIC</h1>
+				<div class="redonda col-md-6 col-md-offset-3" style="border: 1px solid red; height: 90px; width: 90px; background-color: black; border-radius: 50%;"><i class="fa fa-picture-o fa-4x" style="padding: 13px;"></i> </div>
+				
 			</div>
 			<div class="col-md-7">
 				<div class="container-gallery" id="gallery" style="border: 1px solid black">
