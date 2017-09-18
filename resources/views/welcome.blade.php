@@ -371,12 +371,15 @@
 	<div class="container-fluid" style="background: -webkit-linear-gradient(top, #fff , #cecece)">
 		<div class="row">
 			<div class="col-md-5">
-				<h1 class="text-center">Galeria CPIC</h1>
-				<div class="redonda col-md-6 col-md-offset-3" style="border: 1px solid red; height: 90px; width: 90px; background-color: black; border-radius: 50%;"><i class="fa fa-picture-o fa-4x" style="padding: 13px;"></i> </div>
+				<h1 class="text-center" style="font-size: 3em;">Galeria CPIC</h1>
+				<div class="redonda col-md-2 col-md-offset-5" style="height: 100px; width: 100px; background-color: rgba(192, 192, 192, 0.45); border-radius: 50%;"><i class="fa fa-picture-o fa-4x" style="margin-top: 19px;margin-left: 5px; color: rgba(12, 108, 107, 0.86);"></i> </div>
 				
 			</div>
 			<div class="col-md-7">
-				<div class="container-gallery" id="gallery" style="border: 1px solid black">
+				@if(Auth::check())
+				<a href="{{url('imagenes')}}" class="btn btn-default">Agregar más</a>
+				@endif
+				<div class="container-gallery" id="gallery">
 					
 				</div>
 				
