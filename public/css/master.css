@@ -39,15 +39,7 @@ body {
       border:0;
     }
 
-    .primer_mas{
 
-      color: #f7f7f7;
-      position: absolute;
-      right: 1rem;
-      top: 7rem;
-
-      font-size: 75px;
-    }
     .modal-cabeza{
       background: #F5F5F5;
       width: 1024px;
@@ -399,180 +391,181 @@ body {
       text-align: center;
       width: 61%;
       position: relative;
-      left: 117px;
+      left: 102px;
     }
-  }
-  .news-section .owl-stage {
-    margin-bottom: 10rem;
-  }
 
-  #perfil{
-    width: 91px;
-    height: 91px;
-    border-radius: 50%;
+
+    .news-section .owl-stage {
+      margin-bottom: 10rem;
+    }
+
+    #perfil{
+      width: 91px;
+      height: 91px;
+      border-radius: 50%;
+      position: relative;
+      object-fit: cover;
+      margin-top:15px;
+    }
+    .social-networks-right {
+      display: block;
+      position: fixed;
+      top: 50vh;
+      right: 0;
+      z-index: 10;
+    }
+    #main-content {
+      margin-left: 260px;
+      padding: 0 2rem;
+    }
+
+    div.da{
+     display: inline-block;
+     margin: 0px auto !important; 
+
+   }
+   .item1 {
     position: relative;
-    object-fit: cover;
-    margin-top:15px;
+    padding: 10px;
+    color: black;
+
   }
-  .social-networks-right {
+
+  .item1:hover{
+    border-bottom: 1px solid black;
+  }
+  .item1:hover .submenu{
     display: block;
-    position: fixed;
-    top: 50vh;
-    right: 0;
-    z-index: 10;
+    position: absolute;
+
+
   }
-  #main-content {
-    margin-left: 260px;
-    padding: 0 2rem;
+  .jumbotron.jumbotron-index.hero-index{
+    height: 100vh;
+  }
+  .jumbotron-title.text-right{
+    position: absolute;
+    right: 142px;
+    color: #fff;
+    top: 310px;
+  }
+  li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
 
-  div.da{
-   display: inline-block;
-   margin: 0px auto !important; 
+  li.fecha_mod{
 
+    margin: 0;
+    padding: 0;
+  }
+  .fecha_ini{
+    margin-top: 145px;
+  }
+  .ali{
+    font-family: "Tahoma";
+    color:#999;
+    margin-bottom: 60px;
+  }
+  ul.nav.nav-tabs.row{
+    background-color: rgba(192, 192, 192, 0.2);
+  }
+  .tab-content{
+    background-color: rgba(192, 192, 192, 0.2);
+    height: inherit;
+    overflow: hidden;
+  }
+  .formacion {
+    background-color: rgba(192, 192, 192, 0.2);
+    height: inherit;
+    overflow: hidden;
+  }
+  footer.Imagine_dreamer{
+    background: -webkit-linear-gradient(left, #0c6c6b , #000);
+    color: #fff;
+    padding-top: 40px;
+
+  }
+
+
+
+  .jumbotron-pages.jumbotron.contact {
+    background: -webkit-linear-gradient(left, #337b99 , #000);
+    color: #fff;
+  }
+
+
+
+
+
+  .panel-group .panel , .panel-default>.panel-heading {
+    background-color: transparent;
+    /*Aqui es donde se edita esa opacidad */
+    /*background-color: rgba(0, 0, 0, 0.36);*/
+  }
+  .panel-default{
+    border: none;
+    color: #999;
+  }
+  .panel-title{
+    color: #fff;
+
+  }
+  .panel-body{
+    font-size: 20px;
+    text-align: left;
+  }
+  .tab-pane{
+    margin-top: 20px;
+  }
+  h4.panel-title{
+    color: #999;
+  }
+  .panel-title>a{
+    text-decoration: none;
+    color: rgb(0,92,99);
+  }
+  .panel-title>a:hover{
+    color: rgba(0, 91, 130, 0.8);
+  }
+
+
+  .tex.col-md-4{
+    color:#000;
+    border: 1px solid #007881;
+    margin-left: 100px;
+    margin-top: 20px; 
+    height: 200px;
+    width: 280px;
+    padding: 20px;
+    margin-bottom: 25px;
+    transition: 500ms;
+
+  }
+  .tet.row{
+    background-color: #fff;
+    font-family: Tahoma;
+  }
+  .tex.col-md-4:hover{
+    -webkit-filter:opacity(.5);
+    filter: opacity(.5);
+    background-color: #007881;
+    box-shadow: 5px 5px 5px #000;
+    color:white;
+  }
+  .tex.col-md-4{
+    background-color: white;
+    box-shadow: 5px 5px 5px #007881;
+    margin-top: 60px; 
+  }
+  .navbar-default .navbar-nav>li>a, .navbar-default .navbar-text
+  a.navbar-brand:hover, .pop:hover {
+   color: #fff;
+   transition: color 0.4s ease 0s;
+   text-decoration: none;
  }
- .item1 {
-  position: relative;
-  padding: 10px;
-  color: black;
-
-}
-
-.item1:hover{
-  border-bottom: 1px solid black;
-}
-.item1:hover .submenu{
-  display: block;
-  position: absolute;
-
-
-}
-.jumbotron.jumbotron-index.hero-index{
-  height: 100vh;
-}
-.jumbotron-title.text-right{
-  position: absolute;
-  right: 142px;
-  color: #fff;
-  top: 310px;
-}
-li{
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-li.fecha_mod{
-
-  margin: 0;
-  padding: 0;
-}
-.fecha_ini{
-  margin-top: 145px;
-}
-.ali{
-  font-family: "Tahoma";
-  color:#999;
-  margin-bottom: 60px;
-}
-ul.nav.nav-tabs.row{
-  background-color: rgba(192, 192, 192, 0.2);
-}
-.tab-content{
-  background-color: rgba(192, 192, 192, 0.2);
-  height: inherit;
-  overflow: hidden;
-}
-.formacion {
-  background-color: rgba(192, 192, 192, 0.2);
-  height: inherit;
-  overflow: hidden;
-}
-footer.Imagine_dreamer{
-  background: -webkit-linear-gradient(left, #0c6c6b , #000);
-  color: #fff;
-  padding-top: 40px;
-
-}
-
-
-
-.jumbotron-pages.jumbotron.contact {
-  background: -webkit-linear-gradient(left, #337b99 , #000);
-  color: #fff;
-}
-
-
-
-
-
-.panel-group .panel , .panel-default>.panel-heading {
-  background-color: transparent;
-  /*Aqui es donde se edita esa opacidad */
-  /*background-color: rgba(0, 0, 0, 0.36);*/
-}
-.panel-default{
-  border: none;
-  color: #999;
-}
-.panel-title{
-  color: #fff;
-
-}
-.panel-body{
-  font-size: 20px;
-  text-align: left;
-}
-.tab-pane{
-  margin-top: 20px;
-}
-h4.panel-title{
-  color: #999;
-}
-.panel-title>a{
-  text-decoration: none;
-  color: rgb(0,92,99);
-}
-.panel-title>a:hover{
-  color: rgba(0, 91, 130, 0.8);
-}
-
-
-.tex.col-md-4{
-  color:#000;
-  border: 1px solid #007881;
-  margin-left: 100px;
-  margin-top: 20px; 
-  height: 200px;
-  width: 280px;
-  padding: 20px;
-  margin-bottom: 25px;
-  transition: 500ms;
-
-}
-.tet.row{
-  background-color: #fff;
-  font-family: Tahoma;
-}
-.tex.col-md-4:hover{
-  -webkit-filter:opacity(.5);
-  filter: opacity(.5);
-  background-color: #007881;
-  box-shadow: 5px 5px 5px #000;
-  color:white;
-}
-.tex.col-md-4{
-  background-color: white;
-  box-shadow: 5px 5px 5px #007881;
-  margin-top: 60px; 
-}
-.navbar-default .navbar-nav>li>a, .navbar-default .navbar-text
-a.navbar-brand:hover, .pop:hover {
- color: #fff;
- transition: color 0.4s ease 0s;
- text-decoration: none;
-}
-.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+ .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
   margin-left: -15px;
   color: #fff;
   
