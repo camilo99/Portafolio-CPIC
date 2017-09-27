@@ -39,15 +39,7 @@ body {
       border:0;
     }
 
-    .primer_mas{
 
-      color: #f7f7f7;
-      position: absolute;
-      right: 1rem;
-      top: 7rem;
-
-      font-size: 75px;
-    }
     .modal-cabeza{
       background: #F5F5F5;
       width: 1024px;
@@ -399,10 +391,21 @@ body {
       text-align: center;
       width: 61%;
       position: relative;
-      left: 117px;
+      left: 102px;
     }
-  }
-  .news-section .owl-stage {
+    .primer_mas{
+     height: 100%;
+     position: absolute;
+     right: 19rem;
+     border: 1px solid red;
+     top: 0;
+     width: 70%;
+     border: 1px solid red;
+     transform: rotate(32deg);
+
+   }
+
+   .news-section .owl-stage {
     margin-bottom: 10rem;
   }
 
