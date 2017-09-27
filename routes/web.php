@@ -51,3 +51,8 @@ Route::resource('footer', 'FooterController');
 
 
 
+
+/*route::group(['middleware' => 'admin'], function(){
+	Route::get('/admin', 'AdminController@index');
+});*/
+

@@ -14,8 +14,9 @@ class Admin
      * @return mixed
      */
     public function handle($request, Closure $next)
-    {
-        if ($request->dependencia == 'Administrador') {
+    {   
+        $user_actual = \Auth::user();
+        if ($user_actual->dependencia == 'Administrador') {
             return redirect('home');
         }
 
