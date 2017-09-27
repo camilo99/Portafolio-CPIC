@@ -7,10 +7,7 @@ use App\Programs;
 
 class ProgramController extends Controller
 {
-            public function __construct() 
-    {
-        $this->middleware('auth');
-    }
+
     /**
      * Display a listing of the resource.
      *
@@ -19,9 +16,9 @@ class ProgramController extends Controller
     public function index()
     {
        $programs = Programs::all();
-        return view('programas.index')->with('programs', $programs);
+       return view('programas.index')->with('programs', $programs);
 
-    }
+   }
 
     /**
      * Show the form for creating a new resource.
@@ -47,9 +44,9 @@ class ProgramController extends Controller
        $programs->tipo_programa = $request->get('tipo_programa');
        $programs->duracion = $request->get('duracion');
        if($programs->save()) {
-            return redirect('programas')->with('status', 'El programa de formación fue adicionado con éxtio!');            
-        }
+        return redirect('programas')->with('status', 'El programa de formación fue adicionado con éxtio!');            
     }
+}
 
     /**
      * Display the specified resource.

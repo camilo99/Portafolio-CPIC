@@ -88,12 +88,14 @@
       </a>
     </li>
 
-
+    @if(Auth::user()->dependencia == 'Administrador')
     <li>
       <a href="{{url('/users')}}">
         <i class="fa fa-users fa-lg"></i> Usuarios
       </a>
     </li>
+    @endif
+
     <li>
       <a href="{{url('/')}}">
         <i class="fa fa-paper-plane fa-lg"></i> Inicio

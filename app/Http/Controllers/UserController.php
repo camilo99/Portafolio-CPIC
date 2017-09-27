@@ -12,6 +12,7 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    
     public function index()
     {
         $users = User::all();
@@ -26,7 +27,7 @@ class UserController extends Controller
     public function create()
     {
       return view('users.create');  
-    }
+  }
 
     /**
      * Store a newly created resource in storage.

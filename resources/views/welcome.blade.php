@@ -362,7 +362,7 @@
 
 						</div>
 						<div class="col-md-7">
-							@if(Auth::check())
+							@if(Auth::user()->dependencia == 'Administrador')
 							<a href="{{url('imagenes')}}" class="btn btn-default">Ver imagenes</a>
 							@endif
 							<div class="container-gallery" id="gallery">
@@ -429,55 +429,55 @@
 							<img  class="" src="{{asset('imgs/icontecD.png')}}">
 							<ul class="fecha_ini">
 								<li  class="fecha_mod">Última modificación: 
-									16/08/2017 11:18 a. m.</li>
-								</ul>
-							</div>
-
-<<<<<<< HEAD
-							<div class="col-md-5 etica_sena">
-								<img  class="" src="{{asset('imgs/icontecA.png')}}">
-								<img  class="" src="{{asset('imgs/icontecB.png')}}">
-								<img  class="" src="{{asset('imgs/icontecC.png')}}">
-								<img  class="" src="{{asset('imgs/icontecD.png')}}">
-								<ul class="fecha_ini">
-									<li  class="fecha_mod">Última modificación: 
-									16/08/2017 11:18 a. m.</li>
-								</ul>
-							</div>
-
-=======
->>>>>>> 961ec12d5af011536c9c90caa784576a7efca3eb
-
+								16/08/2017 11:18 a. m.</li>
+							</ul>
 						</div>
+
+						<<<<<<< HEAD
+						<div class="col-md-5 etica_sena">
+							<img  class="" src="{{asset('imgs/icontecA.png')}}">
+							<img  class="" src="{{asset('imgs/icontecB.png')}}">
+							<img  class="" src="{{asset('imgs/icontecC.png')}}">
+							<img  class="" src="{{asset('imgs/icontecD.png')}}">
+							<ul class="fecha_ini">
+								<li  class="fecha_mod">Última modificación: 
+								16/08/2017 11:18 a. m.</li>
+							</ul>
+						</div>
+
+						=======
+						>>>>>>> 961ec12d5af011536c9c90caa784576a7efca3eb
+
 					</div>
+				</div>
 
-					<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>	
+				<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>	
 
-				</footer>
-				@endsection
-				@push('scripts')
-				<script>
+			</footer>
+			@endsection
+			@push('scripts')
+			<script>
 
-					var images = [
-					@foreach($imagen as $img)
-					'{{asset($img->imagen)}}',
-					@endforeach
-					];
+				var images = [
+				@foreach($imagen as $img)
+				'{{asset($img->imagen)}}',
+				@endforeach
+				];
 
-					$(function() {
-						$('#gallery').imagesGrid({
-							images: [
-							@foreach($imagen as $img)
-							'{{asset($img->imagen)}}',
-							@endforeach
-							],
-							align: true,
-							getViewAllText: function(imgsCount) { return 'Ver más' }
-						});
-
+				$(function() {
+					$('#gallery').imagesGrid({
+						images: [
+						@foreach($imagen as $img)
+						'{{asset($img->imagen)}}',
+						@endforeach
+						],
+						align: true,
+						getViewAllText: function(imgsCount) { return 'Ver más' }
 					});
 
-				</script>
-				@endpush
+				});
+
+			</script>
+			@endpush
 
 
