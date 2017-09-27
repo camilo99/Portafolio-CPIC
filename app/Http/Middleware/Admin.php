@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Middleware;
-
+use Illuminate\Support\Facades\Auth;
 use Closure;
 
 class Admin
@@ -15,11 +15,16 @@ class Admin
      */
     public function handle($request, Closure $next)
     {   
-        $user_actual = \Auth::user();
-        if ($user_actual->dependencia == 'Administrador') {
-            return redirect('home');
-        }
+        // $user_actual = \Auth::user();
+        // if ($user_actual->dependencia == 'Administrador') {
+        //     return $next($request);
+        // }
+        // return redirect('/');
 
-        return $next($request);
+        if (Auth::Check() && Auth::user()->dependencia == 'Administrador') {
+            return $next($request);
+        }
+        return redirect('');
+
     }
 }

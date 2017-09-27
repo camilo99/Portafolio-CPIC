@@ -362,7 +362,7 @@
 
 						</div>
 						<div class="col-md-7">
-							@if(Auth::user()->dependencia == 'Administrador')
+							@if(Auth::check() && Auth::user()->dependencia != 'Subdirector')
 							<a href="{{url('imagenes')}}" class="btn btn-default">Ver imagenes</a>
 							@endif
 							<div class="container-gallery" id="gallery">

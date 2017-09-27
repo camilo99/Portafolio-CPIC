@@ -41,6 +41,9 @@ Route::resource('bienestar', 'BienestarController');
 
 Route::resource('users', 'UserController');
 
+
+
+
 Route::resource('slider', 'SliderController');
 
 Route::resource('aliados', 'AliadosController');
