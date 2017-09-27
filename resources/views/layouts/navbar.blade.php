@@ -1,6 +1,6 @@
     <div id="app">
-     @if(Auth::guest())
-     <nav class="navbar navbar-default navbar-static-top">
+       @if(Auth::guest())
+       <nav class="navbar navbar-default navbar-static-top">
         <div class="container fluid">
             <div class="navbar-header">
 
@@ -33,6 +33,8 @@
                     
                     <li class="sub_top"><a class="pop" href=""> Programas De Formacion </a>
                         <ul class="sub_cate">
+
+
                             <li class="sub_menu2">
                                 <a class="redirect" href="holi">Formacion Titulada</a>
                             </li>
@@ -58,10 +60,10 @@
                         </ul>
                     </li>
 
-                    
 
 
-                    
+
+
 
                     <li class="sub_top"><a class="pop" href="{{ url('/contact')}}"> Contactanos </a></li>
 
