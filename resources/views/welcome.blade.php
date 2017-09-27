@@ -437,21 +437,6 @@
 							</ul>
 						</div>
 
-						<<<<<<< HEAD
-						<div class="col-md-5 etica_sena">
-							<img  class="" src="{{asset('imgs/icontecA.png')}}">
-							<img  class="" src="{{asset('imgs/icontecB.png')}}">
-							<img  class="" src="{{asset('imgs/icontecC.png')}}">
-							<img  class="" src="{{asset('imgs/icontecD.png')}}">
-							<ul class="fecha_ini">
-								<li  class="fecha_mod">Última modificación: 
-								16/08/2017 11:18 a. m.</li>
-							</ul>
-						</div>
-
-						=======
-						>>>>>>> 961ec12d5af011536c9c90caa784576a7efca3eb
-
 					</div>
 				</div>
 
