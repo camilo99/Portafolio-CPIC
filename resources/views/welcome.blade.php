@@ -112,6 +112,7 @@
 				<div class="owl-carousel" id="dreamer">
 					<div class="img-protect">
 						<img class="image_news center-block" src="{{ asset('imgs/hero.jpg')}}" alt="">
+						
 						<div class="news-description">
 							<p>#FondoEmprenderSENA será más ágil y moderno Infórmese ingresando al enlace 
 								<a href="https://goo.gl/XDPoB5 ">https://goo.gl/XDPoB5</a></p>
@@ -130,7 +131,8 @@
 							</div>
 							<div class="img-protect">
 								<img class="image_news center-block" src="{{ asset('imgs/CS_howdoi.jpg')}}" alt="">
-								
+
+
 								<div class="news-description">
 									<p>#FondoEmprenderSENA será más ágil y moderno Infórmese ingresando al enlace 
 										<a href="https://goo.gl/XDPoB5 ">https://goo.gl/XDPoB5</a></p>
@@ -138,7 +140,6 @@
 
 
 									</div>
-									<span class="primer_mas">+</span>
 									
 								</div>		
 							</div>
