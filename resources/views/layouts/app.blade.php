@@ -95,6 +95,13 @@
       </a>
     </li>
     @endif
+    @if(Auth::user()->dependencia != 'Bienestar')
+    <li>
+      <a href="{{url('/news')}}">
+        <i class="fa fa-newspaper-o fa-lg"></i> Noticias
+      </a>
+    </li>
+    @endif
 
     <li>
       <a href="{{url('/')}}">

@@ -3,7 +3,6 @@
 
 @section('content')
 
-<a href="/admin">Regresar</a>
 <br>
 <h1 class="text-center">Usuarios registrados</h1>
 <a class="btn btn-success" href="{{ url('users/create') }}">

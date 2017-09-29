@@ -7,7 +7,7 @@
 	<h1>Registrar un usuario</h1>
 	<hr>
 	<form action="{{ url('users') }}" method="POST" enctype="multipart/form-data">
-	{{ csrf_field() }}
+		{{ csrf_field() }}
 		<div class="form-group">
 			<input type="text" name="name" placeholder="Nombre completo" class="form-control">
 		</div>
@@ -22,10 +22,11 @@
 		</div>
 		<div class="form-group">
 			<select name="dependencia" id="" class="form-control">
-                <option value="">Seleccione su rol</option>
-                <option value="Administrador">Administrador</option>
-                <option value="Empleado Bienestar">Empleado Bienestar</option>
-            </select>
+				<option value="">Seleccione su rol</option>
+				<option value="Administrador">Administrador</option>
+				<option value="SubDirector">Sub Director</option>
+				<option value="Bienestar">Empleado Bienestar</option>
+			</select>
 		</div>
 		<div class="form-group">
 			<button value="submit">Registrar</button>

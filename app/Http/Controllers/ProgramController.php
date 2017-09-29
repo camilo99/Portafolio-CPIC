@@ -14,12 +14,17 @@ class ProgramController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct(){
+        $this->middleware('admin')->except('index');
+    }
+    
     public function index()
     {
-     $programs = Programs::all();
-     return view('programas.index')->with('programs', $programs);
+       $programs = Programs::all();
+       return view('programas.index')->with('programs', $programs);
 
- }
+   }
 
     /**
      * Show the form for creating a new resource.
@@ -39,12 +44,12 @@ class ProgramController extends Controller
      */
     public function store(ProgramsRequest $request)
     {
-     $programs = new Programs();
-     $programs->nombre_programa = $request->get('nombre_programa');
-     $programs->descripcion_programa = $request->get('descripcion_programa');
-     $programs->tipo_programa = $request->get('tipo_programa');
-     $programs->duracion = $request->get('duracion');
-     if($programs->save()) {
+       $programs = new Programs();
+       $programs->nombre_programa = $request->get('nombre_programa');
+       $programs->descripcion_programa = $request->get('descripcion_programa');
+       $programs->tipo_programa = $request->get('tipo_programa');
+       $programs->duracion = $request->get('duracion');
+       if($programs->save()) {
         return redirect('programas')->with('status', 'El programa de formación fue adicionado con éxtio!');            
     }
 }

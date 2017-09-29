@@ -7,12 +7,14 @@
 	<h1 class="text-center">Programas de formación</h1>
 
 	@if(Auth::check())
+	@if(Auth::user()->dependencia != 'Bienestar')
 	<a class="btn btn-success" href="{{ url('programas/create') }}">
 		Adicionar Programa
 	</a>
 	<br>
 	<br>
 	<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Buscar por nombre" class="form-control">
+	@endif
 
 
 
@@ -33,6 +35,8 @@
 
 
 				<td><a href="{{ url('programas/'.$pro->id) }}" class="btn btn-default"><i class="fa fa-search"></i></a></td>
+				@if(Auth::user()->dependencia != 'Bienestar')
+
 				<td><a href="{{ url('programas/'.$pro->id.'/edit') }}" class="btn btn-default"><i class="fa fa-pencil-square-o"></i></a></td>
 				<td>
 					<form action="{{ url('programas/'.$pro->id) }}" method="POST" style="display: inline-block;">
@@ -41,6 +45,7 @@
 						<button class="btn btn-delete btn-default"><i class="fa fa-times"></i></button>
 					</form>
 				</td>
+				@endif
 			</tr>
 			@endforeach
 		</table>
@@ -48,9 +53,8 @@
 </div>
 
 @endif
-@if(Auth::guest())
 
-<a href="/">Regresar</a>
+@if(Auth::guest())
 <hr>
 <div class="container">
 	<div class="row">

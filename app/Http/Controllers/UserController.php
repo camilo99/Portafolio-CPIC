@@ -13,7 +13,7 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function __construct(){
-        $this->middleware('admin');
+        $this->middleware(['admin','sub','bienestar']);
     }
 
     public function index()

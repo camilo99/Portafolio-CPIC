@@ -35,9 +35,9 @@ Route::resource('programas', 'ProgramController');
 
 Route::resource('admin', 'AdminController');
 
-Route::resource('empresas', 'EmpresaController');
 
 Route::resource('bienestar', 'BienestarController');
+
 
 Route::resource('users', 'UserController');
 
@@ -46,16 +46,18 @@ Route::resource('users', 'UserController');
 
 Route::resource('slider', 'SliderController');
 
-Route::resource('aliados', 'AliadosController');
-
 Route::resource('bienestar', 'BienestarController');
 
-Route::resource('footer', 'FooterController');
+
+Route::group(['prefix'=>'users','middleware'=>['auth','admin','sub','bienestar']],function(){
+	Route::resource('users', 'UserController');
+});
 
 
-
-
-/*route::group(['middleware' => 'admin'], function(){
-	Route::get('/admin', 'AdminController@index');
+/*Route::group(['middleware' => 'admin','sub','bienestar'], function(){
+	Route::resource('users', 'UserController');
 });*/
-
+/*Route::group(['middleware' => ['admin']], function () {
+	
+});
+*/

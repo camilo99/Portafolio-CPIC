@@ -101,7 +101,7 @@
 </nav>
 
 <!-- Modal -->
-<div class="modal fade" id="myModala" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="myModala" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
 	<div class="modal-dialog" role="document">
 		<div class="modal-content news_notice">
 			<div class="modal-cabeza">
@@ -153,12 +153,13 @@
 				</div>
 			</div>
 			<nav class="social-networks-right">
-				<a  href="#" data-toggle="modal" data-target="#myModala"><i class="fa fa-reply fa-2x"></i></a>
+				<a  href="#" data-toggle="modal" data-target="#myModala" data-toggle="tooltip" title="Click para ver las noticias." style="text-decoration: none;"><i class="fa fa-newspaper-o fa-2x"></i><br>Noticias</a>
 			</nav>
 			@endif
 			<section class="slider">
 				<header class="jumbotron jumbotron-index hero-index">
-					@if(Auth::check())
+					@if(Auth::check() && Auth::user()->dependencia != 'Bienestar')
+					
 					<a style="position: absolute;z-index: 999; right: 130px; top: 36px;" class="btn btn-success" href="{{ url('slider/create') }}"> 
 						Añadir Imagen
 					</a>
@@ -167,7 +168,7 @@
 
 						@foreach($slider_img as $img)
 						<div class="imageContainer">
-							@if(Auth::check())
+							@if(Auth::check() && Auth::user()->dependencia != 'Bienestar')
 
 							<a  style="position: absolute;top: 38px;z-index: 999;right: 0;" href="{{ url('slider/'.$img->id.'/edit') }}" class="btn btn-default"> Editar Imagen </a>
 
@@ -365,7 +366,7 @@
 
 						</div>
 						<div class="col-md-7">
-							@if(Auth::check() && Auth::user()->dependencia != 'Subdirector')
+							@if(Auth::check() && Auth::user()->dependencia != 'SubDirector')
 							<a href="{{url('imagenes')}}" class="btn btn-default">Ver imagenes</a>
 							@endif
 							<div class="container-gallery" id="gallery">
