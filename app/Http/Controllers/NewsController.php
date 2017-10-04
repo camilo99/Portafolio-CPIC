@@ -2,17 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\News;
 use Illuminate\Http\Request;
 
-use App\Slider_images;
-
-use App\News;
-
-use App\Image;
-
-
-
-class WelcomeController extends Controller
+class NewsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -21,14 +14,8 @@ class WelcomeController extends Controller
      */
     public function index()
     {
-        $slider_img = Slider_images::all();
-        $imagen = Image::all();
         $news = News::all();
-        return view('welcome', compact('news', 'slider_img', 'imagen'));
-
-        
-
-
+        return view('news.index')->with('news', $news);
     }
 
     /**
@@ -38,7 +25,7 @@ class WelcomeController extends Controller
      */
     public function create()
     {
-        //
+        return view('news.create');
     }
 
     /**
@@ -49,7 +36,17 @@ class WelcomeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $news = new News();
+        if ($request->hasFile('imagen')) {
+            $file = time().'.'.$request->imagen->getClientOriginalExtension();
+            $request->imagen->move(public_path('images'), $file);
+        }
+        $news->imagen = 'images/'.$file;
+        $news->descripcion = $request->get('descripcion');
+        $news->fecha = $request->get('fecha');
+        if($news->save()) {
+            return redirect('news')->with('status', 'El programa de formación fue adicionado con exito!');            
+        }
     }
 
     /**
@@ -94,12 +91,7 @@ class WelcomeController extends Controller
      */
     public function destroy($id)
     {
-        //
+        News::destroy($id);
+        return redirect('news')->with('status', 'El usuario fue eliminado con exito!');
     }
-
-    public function mostrarProgramas(){
-     $programs = Programs::all();
-
-     return view('programas_formacion.for_com');
- }
 }

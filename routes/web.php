@@ -19,6 +19,7 @@ Auth::routes();
 
 
 Route::resource('/imagenes','ImageController');
+Route::resource('news','NewsController');
 
 
 Route::get('/', 'WelcomeController@index');
@@ -48,10 +49,9 @@ Route::resource('slider', 'SliderController');
 
 Route::resource('bienestar', 'BienestarController');
 
+Route::resource('users', 'UserController');
 
-Route::group(['prefix'=>'users','middleware'=>['auth','admin','sub','bienestar']],function(){
-	Route::resource('users', 'UserController');
-});
+
 
 
 /*Route::group(['middleware' => 'admin','sub','bienestar'], function(){
