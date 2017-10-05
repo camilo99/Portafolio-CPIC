@@ -82,50 +82,46 @@
 
 
 
-    <li>
-      <a href="{{url('/admin')}}">
-        <i class="fa fa-user fa-lg"></i> Mi perfil
-      </a>
-    </li>
+    <a href="{{url('/admin')}}" style="text-decoration: none; color: #fff;">
+      <li>
+        &nbsp;&nbsp;<i class="fa fa-user fa-lg"></i> Mi perfil
+      </li>
+    </a>
 
     @if(Auth::user()->dependencia == 'Administrador')
-    <li>
-      <a href="{{url('/users')}}">
-        <i class="fa fa-users fa-lg"></i> Usuarios
-      </a>
-    </li>
+    <a href="{{url('/users')}}" style="text-decoration: none; color: #fff;">
+      <li>
+        &nbsp;&nbsp;<i class="fa fa-users fa-lg"></i> Usuarios
+      </li>
+    </a>
     @endif
     @if(Auth::user()->dependencia != 'Bienestar')
-    <li>
-      <a href="{{url('/news')}}">
-        <i class="fa fa-newspaper-o fa-lg"></i> Noticias
-      </a>
-    </li>
+    <a href="{{url('/news')}}" style="text-decoration: none; color: #fff;">
+      <li>
+        &nbsp;&nbsp;<i class="fa fa-newspaper-o fa-lg"></i> Noticias
+      </li>
+    </a>
     @endif
 
+    <a href="{{url('/')}}" style="text-decoration: none; color: #fff;">
+      <li>
+        &nbsp;&nbsp;<i class="fa fa-paper-plane fa-lg"></i> Inicio
+      </li>
+    </a>
+  </ul>
+
+
+
+  
+
+  <a href="{{url('programas')}}" style="text-decoration: none; color: #fff;">
     <li>
-      <a href="{{url('/')}}">
-        <i class="fa fa-paper-plane fa-lg"></i> Inicio
-      </a>
-    </li>
-  </ul>
+     &nbsp;&nbsp;<i class="fa fa-columns fa-lg"></i> Programas De Formacion
+   </li>
+ </a>
 
+ 
 
-
-  <li data-toggle="collapse" data-target="#new" class="collapsed">
-
-    <a href="#"><i class="fa fa-columns fa-lg"></i> Programas De Formacion <span class="arrow"></span></a>
-
-  </li>
-  <ul class="sub-menu collapse" id="new">
-    <a class="sub-dos" href="{{url('programas/')}}"><li>Formacion Titulada</li></a>
-    <a class="sub-dos" href="{{url('')}}"><li>Formacion Complementaria</li></a>
-    <a class="sub-dos" href="{{url('')}}"><li>Formacion Virtual</li></a>
-
-
-
-
-  </ul>
 </div>
 </div>
 

@@ -42,7 +42,7 @@
 							<a class="redirect" href="{{url('programas')}}">Formacion Titulada</a>
 						</li>
 						<li class="sub_menu2">
-							<a class="redirect" href="{{url('pros')}}">Formacion Complementaria</a>
+							<a class="redirect" href="{{url('programas_formacion')}}">Formacion Complementaria</a>
 						</li>
 						<li class="sub_menu2">
 							<a class="redirect" href="">Formacion Virtual</a>
@@ -107,7 +107,7 @@
 		<div class="modal-content news_notice">
 			<div class="modal-cabeza">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times" aria-hidden="true"></i></button>
-				<h4 class="modal-title" id="myModalLabel">Noticias De La Red Sena</h4>
+				<h4 class="modal-title" id="myModalLabel">Noticias Del Centro de Procesos Industriales y de Construccion</h4>
 			</div>
 			<div class="modal-bady">
 				<div class="owl-carousel" id="dreamer">

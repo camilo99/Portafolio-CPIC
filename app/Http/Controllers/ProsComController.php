@@ -3,16 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Programs;
 
-use App\Slider_images;
-
-use App\News;
-
-use App\Image;
-
-
-
-class WelcomeController extends Controller
+class ProsComController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -21,15 +14,9 @@ class WelcomeController extends Controller
      */
     public function index()
     {
-        $slider_img = Slider_images::all();
-        $imagen = Image::all();
-        $news = News::all();
-        return view('welcome', compact('news', 'slider_img', 'imagen'));
-
-        
-
-
-    }
+     $programs = Programs::all();
+     return view('programas_formacion.for_com')->with('programs', $programs);
+ }
 
     /**
      * Show the form for creating a new resource.
@@ -96,5 +83,4 @@ class WelcomeController extends Controller
     {
         //
     }
-
 }

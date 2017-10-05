@@ -29,7 +29,7 @@ Route::get('/admin', 'AdminController@index');
 
 Route::get('/contact', 'ContactController@index');
 
-Route::get('pros', 'WelcomeController@mostrarProgramas');
+Route::resource('programas_formacion', 'ProsComController');
 
 
 Route::resource('programas', 'ProgramController');
