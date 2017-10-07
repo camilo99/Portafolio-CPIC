@@ -30,6 +30,7 @@ Route::get('/admin', 'AdminController@index');
 Route::get('/contact', 'ContactController@index');
 
 Route::resource('programas_formacion', 'ProsComController');
+Route::resource('programas_form', 'For_VirController');
 
 
 Route::resource('programas', 'ProgramController');

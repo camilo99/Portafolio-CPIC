@@ -19,7 +19,7 @@
 						<div class="panel-heading text-center" role="tab" id="headingOne">
 							<h4 class="panel-title" class="animated bounceInLeft" >
 								<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-									Formación complementaria
+									Formación virtual
 								</a>
 							</h4>
 						</div>
@@ -28,7 +28,7 @@
 						$cont=50;
 						@endphp
 						@foreach($programs as $pro)
-						@if($pro->tipo_programa == 'Complementaria')
+						@if($pro->tipo_programa == 'Virtual')
 						<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingSOne">
 							<div class="panel-body">
 								<div class="panel-group" id="sub-accordion" role="tablist" aria-multiselectable="true">

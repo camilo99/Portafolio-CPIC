@@ -36,13 +36,13 @@
 
 
                             <li class="sub_menu2">
-                                <a class="redirect" href="holi">Formacion Titulada</a>
+                                <a class="redirect" href="{{url('/programas')}}">Formacion Titulada</a>
                             </li>
                             <li class="sub_menu2">
-                                <a class="redirect" href="">Formacion Complementaria</a>
+                                <a class="redirect" href="{{url('/programas_formacion')}}">Formacion Complementaria</a>
                             </li>
                             <li class="sub_menu2">
-                                <a class="redirect" href="{{url('/programas')}}">Formacion Virtual</a>
+                                <a class="redirect" href="{{url('/programas_form')}}">Formacion Virtual</a>
                             </li>
                         </ul>
                     </li>

@@ -45,7 +45,7 @@
 							<a class="redirect" href="{{url('programas_formacion')}}">Formacion Complementaria</a>
 						</li>
 						<li class="sub_menu2">
-							<a class="redirect" href="">Formacion Virtual</a>
+							<a class="redirect" href="{{url('/programas_form')}}">Formacion Virtual</a>
 						</li>
 					</ul>
 				</li>
