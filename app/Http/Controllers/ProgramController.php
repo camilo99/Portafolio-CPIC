@@ -105,4 +105,20 @@ class ProgramController extends Controller
         Programs::destroy($id);
         return redirect('programas')->with('status', 'El artículo fue eliminado con éxtio!');
     }
+    public function pdf() {
+        $programs = Programs::all();
+
+        $view = \View::make('programas.pdf', compact('programs'))->render();
+        $pdf  = \App::make('dompdf.wrapper');
+        $pdf->loadHTML($view);
+        return $pdf->download('lista-programas.pdf');
+    }
+    public function showexcel() {
+         \Excel::create('programsfile', function($excel) {
+         $excel->sheet('List', function($sheet) {
+         $programs = Programs::all();
+         $sheet->loadView('programas.excel', array('programs' => $programs));
+         });
+         })->download('xls');
+        }
 }

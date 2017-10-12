@@ -116,4 +116,19 @@ class UserController extends Controller
         User::destroy($id);
         return redirect('users')->with('status', 'El usuario fue eliminado con exito!');
     }
+    public function pdf() {
+        $users = User::all();
+        $view = \View::make('users.pdf', compact('users'))->render();
+        $pdf  = \App::make('dompdf.wrapper');
+        $pdf->loadHTML($view);
+        return $pdf->download('lista-usuarios.pdf');
+    }
+    public function showexcel() {
+         \Excel::create('usersfile', function($excel) {
+         $excel->sheet('List', function($sheet) {
+         $users = User::all();
+         $sheet->loadView('users.excel', array('users' => $users));
+         });
+         })->download('xls');
+        }
 }

@@ -27,6 +27,15 @@ Route::get('/', 'WelcomeController@index');
 
 Route::get('/admin', 'AdminController@index');
 
+
+Route::get('users/pdf', 'UserController@pdf');
+Route::get('users/showexcel', 'UserController@showexcel');
+
+Route::get('programas/pdf', 'ProgramController@pdf');
+Route::get('programas/showexcel', 'ProgramController@showexcel');
+
+
+
 Route::get('/contact', 'ContactController@index');
 
 Route::resource('programas_formacion', 'ProsComController');

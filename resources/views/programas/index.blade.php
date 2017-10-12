@@ -16,9 +16,14 @@
 	@endif
 	<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Buscar por nombre" class="form-control">
 
-
+	
 
 	<div class="table-responsive">
+	<a class="btn btn-default"  href="{{ url('programas/pdf')}}">
+			<i class="glyphicon glyphicon-file"></i> Exportar PDF
+		</a>
+		<a class="btn btn-default" href="{{ url('programas/showexcel')}}">
+			<i class="glyphicon glyphicon-file"></i> Exportar EXCEL </a>
 		<table class="table table-bordered text-center"  id="myTable">
 			<tr>
 				<th>Nombre Programa</th>

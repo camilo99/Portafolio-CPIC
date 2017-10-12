@@ -25,6 +25,11 @@
 	</div>
 </div>
 @endforeach
+		<a class="btn btn-default"  href="{{ url('users/pdf')}}">
+			<i class="glyphicon glyphicon-file"></i> Exportar PDF
+		</a>
+		<a class="btn btn-default" href="{{ url('users/showexcel')}}">
+			<i class="glyphicon glyphicon-file"></i> Exportar EXCEL </a>
 
 
 
