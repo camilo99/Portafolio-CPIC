@@ -13,8 +13,8 @@
 	</a>
 	<br>
 	<br>
-	<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Buscar por nombre" class="form-control">
 	@endif
+	<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Buscar por nombre" class="form-control">
 
 
 

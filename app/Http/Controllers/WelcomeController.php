@@ -9,6 +9,7 @@ use App\Slider_images;
 use App\News;
 
 use App\Image;
+use App\Aliado;
 
 
 
@@ -21,10 +22,11 @@ class WelcomeController extends Controller
      */
     public function index()
     {
+        $aliados = Aliado::all();
         $slider_img = Slider_images::all();
         $imagen = Image::all();
         $news = News::all();
-        return view('welcome', compact('news', 'slider_img', 'imagen'));
+        return view('welcome', compact('aliados','news', 'slider_img', 'imagen'));
 
         
 

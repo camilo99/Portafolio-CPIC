@@ -178,46 +178,19 @@
 		<h1 class="text-center ali">Nuestros Aliados</h1>
 		<hr>
 		<div class="row">
+			@foreach($aliados as $ali)
 			<div class="col-sm-6 col-md-3 unir_t">
 				<div class="thumbnail animated fadeIn">
-					<img class="img_pagi" src="{{ asset('images/1504897540.png') }}" alt="...">
+					<img class="img_pagi" src="{{($ali->imagen)}}" alt="...">
 					<div class="caption">
 						<h3></h3>
-						<p>La Agencia Pública de Empleo del SENA presta un servicio de intermediación laboral público, gratuito, indiscriminado y sin intermediarios, para que los colombianos puedan participar de una oportunidad de empleo y los empresarios encuentren el talento humano que requieren para ocupar sus vacantes.</p>
-						<a href="https://agenciapublicadeempleo.sena.edu.co/Paginas/inicio.aspx" class="btn btn-primary" role="button">Mas Informacion</a>
+						<p>{{($ali->descripcion)}}</p>
+						<a href="{{($ali->link)}}" class="btn btn-primary" role="button">Mas Informacion</a>
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-6 col-md-3 unir_t">
-				<div class="thumbnail animated fadeIn">
-					<img class="img_pagi" src="{{ asset('images/1504897601.png') }}" alt="...">
-					<div class="caption">
-						<h3></h3>
-						<p>Es un programa de innovación tecnológica del ServicioNacional de Aprendizaje dirigida a todos los Colombianos, que actúa como acelerador para el desarrollo de proyectos de I+D+i materializados en prototipos funcionales en cuatro líneas tecnológicas: Electrónica y Telecomunicaciones, Tecnologías Virtuales, Ingeniería y diseño.</p>
-						<a href="http://tecnoparque.sena.edu.co/" class="btn btn-primary" role="button">Mas Informacion</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-3 unir_t">
-				<div class="thumbnail animated fadeIn">
-					<img class="img_pagi" src="{{ asset('images/1504897630.png') }}" alt="...">
-					<div class="caption">
-						<h3></h3>
-						<p>El Sistema de Investigación, Desarrollo Tecnológico e Investigación (SENNOVA) tiene el propósito de fortalecer los estándares de calidad y pertinencia, en las áreas de investigación, desarrollo tecnológico e innovación, de la formación profesional impartida en la entidad, identifica oportunidades e ideas de negocios, </p>
-						<a href="http://www.sena.edu.co/es-co/formacion/Paginas/tecnologia-innovacion.aspx" class="btn btn-primary" role="button">Mas Informacion</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-3 unir_t">
-				<div class="thumbnail animated fadeIn">
-					<img class="img_pagi" src="{{ asset('images/1504897668.png') }}" alt="...">
-					<div class="caption">
-						<h3></h3>
-						<p>Más que una competencia, para el SENA WorldSkills es una estrategia que promueve y fomenta la calidad en la formación técnica y tecnológica, permitiendo a sus aprendices medir sus conocimientos en el plano internacional y alcanzar los más altos niveles de preparación y competitividad en cada una de sus habilidades.</p>
-						<a href="http://worldskills.sena.edu.co/" class="btn btn-primary" role="button">Mas Informacion</a>
-					</div>
-				</div>
-			</div>
+			@endforeach
+
 		</div>		
 
 	</div>

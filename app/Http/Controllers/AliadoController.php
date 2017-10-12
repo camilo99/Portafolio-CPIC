@@ -2,24 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
+use App\Aliado;
+
 use Illuminate\Http\Request;
 
-class UserController extends Controller
+class AliadoController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function __construct(){
-        $this->middleware('admin')->except('edit');
-    }
-
     public function index()
     {
-        $users = User::all();
-        return view('users.index')->with('users', $users);
+        $aliados = Aliado::all();
+        return view('aliados.index')->with('aliados', $aliados);
     }
 
     /**
@@ -29,8 +26,8 @@ class UserController extends Controller
      */
     public function create()
     {
-      return view('users.create');  
-  }
+        return view('aliados.create');
+    }
 
     /**
      * Store a newly created resource in storage.
@@ -40,21 +37,17 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $user = new User();
-        if ($request->hasFile('image')) {
-            $file = time().'.'.$request->image->getClientOriginalExtension();
-            $request->image->move(public_path('images'), $file);
+        $aliados = new Aliado();
+        if ($request->hasFile('imagen')) {
+            $file = time().'.'.$request->imagen->getClientOriginalExtension();
+            $request->imagen->move(public_path('images'), $file);
         }
-        $user->name = $request->get('name');
-        $user->email = $request->get('email');
-        $user->password = bcrypt($request->get('password'));
-        $user->dependencia = $request->get('dependencia');
-        $user->image = 'images/'.$file;
-        if($user->save()) {
-            return redirect('users')->with('status', 'El programa de formación fue adicionado con exito!');            
+        $aliados->imagen = 'images/'.$file;
+        $aliados->descripcion = $request->get('descripcion');
+        $aliados->link = $request->get('link');
+        if($aliados->save()) {
+            return redirect('aliados')->with('status', 'El programa de formación fue adicionado con exito!');            
         }
-
-
     }
 
     /**
@@ -76,8 +69,8 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        $user = User::find($id);
-        return view('users.edit', compact('user'));
+        $aliados = Aliado::find($id);
+        return view('aliados.edit', compact('aliados'));
     }
 
     /**
@@ -89,20 +82,17 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $user = User::find($id);
+        $aliados = Aliado::find($id);
         if ($request->hasFile('image')) {
             $file = time().'.'.$request->image->getClientOriginalExtension();
             $request->image->move(public_path('images'), $file);
         }
-        $user->name = $request->get('name');
-        $user->email = $request->get('email');
-        $user->password = bcrypt($request->get('password'));
-        $user->dependencia = $request->get('dependencia');
-        $user->image = 'images/'.$file;
-        if($user->save()) {
-            return redirect('admin')->with('status', 'El programa de formación fue adicionado con exito!');            
+        $aliados->imagen = 'images/'.$file;
+        $aliados->descripcion = $request->get('descripcion');
+        $aliados->link = $request->get('link');
+        if($aliados->save()) {
+            return redirect('aliados')->with('status', 'El programa de formación fue adicionado con exito!');            
         }
-        
     }
 
     /**
@@ -113,7 +103,7 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        User::destroy($id);
-        return redirect('users')->with('status', 'El usuario fue eliminado con exito!');
+        Aliado::destroy($id);
+        return redirect('aliados')->with('status', 'El usuario fue eliminado con exito!');
     }
 }

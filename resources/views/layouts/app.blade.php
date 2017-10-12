@@ -94,15 +94,18 @@
         &nbsp;&nbsp;<i class="fa fa-users fa-lg"></i> Usuarios
       </li>
     </a>
+    <a href="{{url('/aliados')}}" style="text-decoration: none; color: #fff;">
+      <li>
+        &nbsp;&nbsp;<i class="fa fa-university fa-lg"></i> Aliados
+      </li>
+    </a>
     @endif
-    @if(Auth::user()->dependencia != 'Bienestar')
     <a href="{{url('/news')}}" style="text-decoration: none; color: #fff;">
       <li>
         &nbsp;&nbsp;<i class="fa fa-newspaper-o fa-lg"></i> Noticias
       </li>
     </a>
-    @endif
-
+    
     <a href="{{url('/')}}" style="text-decoration: none; color: #fff;">
       <li>
         &nbsp;&nbsp;<i class="fa fa-paper-plane fa-lg"></i> Inicio

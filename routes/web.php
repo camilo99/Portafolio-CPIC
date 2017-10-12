@@ -43,6 +43,8 @@ Route::resource('bienestar', 'BienestarController');
 
 Route::resource('users', 'UserController');
 
+Route::resource('aliados', 'AliadoController');
+
 
 
 

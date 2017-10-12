@@ -3,7 +3,7 @@
 @section('title', 'Lista de Artículos')
 
 @section('content')
-<a class="btn btn-default" href="{{url('/')}}">Regresar</a>
+<h1 class="text-center">Noticias</h1>
 <a class="btn btn-success" href="{{url('news/create')}}">Añadir noticia</a>
 <hr>
 
